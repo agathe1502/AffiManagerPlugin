@@ -88,7 +88,7 @@ function am_save_options($container, $activeTab, $options ) {
 
     am_set_connection_status( $parsed_response );
 
-    am_get_connection_status();
+    am_redirect_to_form();
 }
 
 add_action( 'tf_save_admin_am', 'am_save_options', 10, 3 );
