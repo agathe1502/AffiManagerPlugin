@@ -58,7 +58,6 @@ class AmUpdateBlocksTable
         $sql = "SELECT * FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug'";
         $blocksFromDb = $wpdb->get_results($sql);
 
-
         $query = "";
 
         foreach ($blocksFromDb as $blockFromDb) {
@@ -92,7 +91,26 @@ class AmUpdateBlocksTable
             $wpdb->query($sql);
         }
 
-        // TODO : Et enfin, avec tout les blocs enregistrés, on recrée le post depuis le début en enchainant les blocs à la suite
+        // Then, recreate the post content with the data saved in DB
+        $args = array(
+            'name'        => $slug,
+            'post_type'   => 'post',
+            'post_status' => 'publish',
+            'numberposts' => 1
+        );
+        $post = get_posts($args)[0];
+
+        $sql = "SELECT content FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug' ORDER BY position";
+        $contents = $wpdb->get_results($sql);
+
+        $content = '';
+        foreach ($contents as $post_content) {
+            $content .= $post_content->content . '<br>';
+        }
+        $post->post_content = $content;
+
+        wp_update_post($post);
+
 
         wp_send_json(array(
             'status' => true,
