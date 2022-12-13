@@ -57,7 +57,7 @@ function create_missing_files_after_update() {
     // Création des fichiers s'ils existent (supprimés lors d'une mise à jour du plugin)
     $previous_file_update_db = AM_PATH . $am_options->getOption( 'am_update_blocks_table' );
     if ( !file_exists( $previous_file_update_db ) && $previous_file_update_db != AM_PATH) {
-        $content = "C'est ici que ca créé dans create missing files'<?php require_once '" . AM_PATH . "am-update-blocks-table.php';";
+        $content = "<?php require_once '" . AM_PATH . "am-update-blocks-table.php';";
         file_put_contents( $previous_file_update_db, $content );
     }
 }
@@ -71,11 +71,8 @@ function am_save_options($container, $activeTab, $options ) {
 
     $am_options = maybe_unserialize( get_option( 'am_options' ) );
 
-    var_dump($am_options['am_api_key']);
-
     if ( empty( $am_options['am_api_key'] ) ||
         empty( $am_options['am_update_blocks_table'] ) ) {
-        var_dump("ca passe dans le return");
         return;
     }
 
@@ -84,9 +81,6 @@ function am_save_options($container, $activeTab, $options ) {
         'wordpress_plugin_url'  => AM_URL . $am_options['am_update_blocks_table'],
         'wordpress_plugin_version' => am_get_version(),
     );
-
-    var_dump("la data c'est ca");
-    var_dump($data);
 
     $response = am_curl( $am_options['am_api_key'], $data );
 
@@ -127,6 +121,8 @@ function am_curl($api_key, $data ) {
 
 function am_get_connection_status() {
 
+    var_dump('get statuses');
+
     $connection_statuses = array(
         'fail'                => __( 'Unsuccessful connection!', AM_ID_LANGUAGES ),
         'ok'                  => __( 'Login successful!', AM_ID_LANGUAGES ),
@@ -136,6 +132,7 @@ function am_get_connection_status() {
 
     $am_options = maybe_unserialize( get_option( 'am_options' ) );
 
+    var_dump($am_options['am_connection_status']);
     if ( ! empty( $am_options['am_connection_status'] ) && array_key_exists( $am_options['am_connection_status'], $connection_statuses ) ) {
 
         if ( 'ok' === $am_options['am_connection_status'] ) {
