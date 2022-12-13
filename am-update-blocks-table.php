@@ -26,7 +26,7 @@ class AmUpdateBlocksTable
                 'status' => false,
                 'code' => 'incorrect_api_key',
                 'message' => __('Incorrect API key.', AM_ID_LANGUAGES),
-                'version' =>am_get_version(),
+                'wordpress_plugin_version' => am_get_version(),
             ));
 
             return;
@@ -34,56 +34,72 @@ class AmUpdateBlocksTable
 
         $json = file_get_contents('php://input');
         $data = json_decode($json, true);
+        global $wpdb;
 
-        if (!empty($data['test_connection'])) {
+        $blocksByIdFromAffiManager = [];
 
-            wp_send_json(array(
-                'status' => true,
-                'code' => 'success_connection',
-                'plugin_url' => plugin_dir_url(__FILE__) . $this->am_options->getOption('am_update_blocks_table'),
-                'message' => __('Success connection', AM_ID_LANGUAGES),
-                'version' =>am_get_version(),
-            ));
+        // Check if the data is great
+        foreach ($data as $block) {
+            if (isset($block['id']) and isset($block['slug']) and isset($block['content']) and isset($block['position']) and isset($block['enable']) and isset($block['status'])) {
+                $blocksByIdFromAffiManager[$block['id']] = $block;
+                $slug = $block['slug'];
+            } else {
+                wp_send_json(array(
+                    'status' => false,
+                    'code' => 'incorrect_data',
+                    'message' => __('Wrong data.', AM_ID_LANGUAGES),
+                    'wordpress_plugin_version' => am_get_version(),
+                ));
+                return;
+            }
         }
-        // TODO
-        /*
-        else if (isset($data['id']) and isset($data['affiliate_campaign_name']) and isset($data['offer_name']) and isset($data['offer_url'])
-            and isset($data['slug']) and isset($data['content']) and isset($data['affiliate_link']) and isset($data['enable']) and isset($data['deleted']) and isset($data['website_url']) and isset($data['guid'])) {
-            global $wpdb;
 
-            if ($data['deleted'] == false) {
-                // Si la ligne n'est pas supprimée, on insère la ligne ou on la modifie si elle existe déjà.
-                $sql = "INSERT INTO {$wpdb->prefix}sn_campaigns (id, affiliate_campaign_name, offer_name, offer_url, website_url, slug, content, affiliate_link, enable, guid, banner_text, banner_text_color, banner_bg_color, enable_banner_sd, enable_banner_md, enable_banner_ld, banner_font_size, banner_obfuscate) 
-                        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s, %s,%s) ON DUPLICATE KEY 
-                        UPDATE affiliate_campaign_name = %s, offer_name = %s, offer_url = %s, website_url = %s, slug = %s, content = %s, affiliate_link = %s, enable = %d, banner_text = %s, banner_text_color = %s, banner_bg_color = %s, enable_banner_sd = %d, enable_banner_md = %d, enable_banner_ld = %d, banner_font_size = %s, banner_obfuscate = %s";
+        // Get the blocks in the DB for this page
+        $sql = "SELECT * FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug'";
+        $blocksFromDb = $wpdb->get_results($sql);
 
-                $sql = $wpdb->prepare($sql,
-                    $data['id'], $data['affiliate_campaign_name'], $data['offer_name'], $data['offer_url'], $data['website_url'], $data['slug'], $data['content'], $data['affiliate_link'], $data['enable'], $data['guid'], $data['banner_text'], $data['banner_text_color'], $data['banner_bg_color'], $data['enable_banner_sd'],$data['enable_banner_md'],$data['enable_banner_ld'],$data['banner_font_size'],$data['banner_obfuscate'],
-                    $data['affiliate_campaign_name'], $data['offer_name'], $data['offer_url'], $data['website_url'], $data['slug'], $data['content'], $data['affiliate_link'], $data['enable'], $data['banner_text'], $data['banner_text_color'], $data['banner_bg_color'], $data['enable_banner_sd'],$data['enable_banner_md'],$data['enable_banner_ld'],$data['banner_font_size'], $data['banner_obfuscate']);
+
+        $query = "";
+
+        foreach ($blocksFromDb as $blockFromDb) {
+            $id = $blockFromDb->id;
+            if (isset($blocksByIdFromAffiManager[$id])) {
+                // Id is present in the list sended by Affimanager
+                $blockFromAm = $blocksByIdFromAffiManager[$id];
+                if ($blockFromAm["status"] == "DEPLOYED") {
+                    // Save all the data
+                    $sql = "UPDATE {$wpdb->prefix}am_blocks SET position = %s, enable = %s, content = %s WHERE id = %s;";
+                    $sql = $wpdb->prepare($sql, $blockFromAm["position"], $blockFromAm["enable"], $blockFromAm["content"], $id);
+                } else {
+                    // Save only position
+                    $sql = "UPDATE {$wpdb->prefix}am_blocks SET position = %s WHERE id = %s;";
+                    $sql = $wpdb->prepare($sql, $blockFromAm["position"], $id);
+                }
+                // Remove the id from the array
+                unset($blocksByIdFromAffiManager[$id]);
+            } else {
+                // Block has been deleted => Delete it from the DB
+                $sql = "DELETE FROM {$wpdb->prefix}am_blocks WHERE id = %s;";
+                $sql = $wpdb->prepare($sql, $id);
             }
-            else {
-                $sql = "DELETE FROM {$wpdb->prefix}sn_campaigns WHERE id = %s";
-                $sql = $wpdb->prepare($sql, $data['id']);
-            }
-
             $wpdb->query($sql);
+        }
 
-            wp_send_json(array(
-                'status' => true,
-                'code' => 'success',
-                'message' => __('Success', AM_ID_LANGUAGES),
-                'version' =>am_get_version(),
-            ));
+        // In the array, there are only ids to add
+        foreach ($blocksByIdFromAffiManager as $id => $blockToAdd) {
+            $sql = "INSERT INTO {$wpdb->prefix}am_blocks (id, position, slug, enable, content) VALUES (%s, %s, %s, %s, %s);";
+            $sql = $wpdb->prepare($sql, $id, $blockToAdd["position"], $blockToAdd["slug"], $blockToAdd["enable"], $blockToAdd["content"]);
+            $wpdb->query($sql);
         }
-        */
-        else {
-            wp_send_json(array(
-                'status' => false,
-                'code' => 'incorrect_data',
-                'message' => __('Wrong data.', AM_ID_LANGUAGES),
-                'version' =>am_get_version(),
-            ));
-        }
+
+        // TODO : Et enfin, avec tout les blocs enregistrés, on recrée le post depuis le début en enchainant les blocs à la suite
+
+        wp_send_json(array(
+            'status' => true,
+            'code' => 'success',
+            'message' => __('Success', AM_ID_LANGUAGES),
+            'wordpress_plugin_version' => am_get_version(),
+        ));
     }
 
     private function is_bearer_token_valid()

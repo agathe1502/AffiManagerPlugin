@@ -87,8 +87,6 @@ function am_save_options($container, $activeTab, $options ) {
     $parsed_response = json_decode($response, true);
 
     am_set_connection_status( $parsed_response );
-
-    wp_redirect($_SERVER['HTTP_REFERER']);
 }
 
 add_action( 'tf_save_admin_am', 'am_save_options', 10, 3 );
@@ -121,7 +119,6 @@ function am_curl($api_key, $data ) {
 }
 
 function am_get_connection_status() {
-
     // TODO: Cette fonction est appelée avant d'avoir mis à jour le statut en BDD du coup, après avoir enregistré, on n'a pas le bon statut et on croit que l'API key n'est pas la bonne
 
     $connection_statuses = array(
@@ -133,7 +130,6 @@ function am_get_connection_status() {
 
     $am_options = maybe_unserialize( get_option( 'am_options' ) );
 
-    var_dump($am_options['am_connection_status']);
     if ( ! empty( $am_options['am_connection_status'] ) && array_key_exists( $am_options['am_connection_status'], $connection_statuses ) ) {
 
         if ( 'ok' === $am_options['am_connection_status'] ) {
