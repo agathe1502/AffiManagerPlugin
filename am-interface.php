@@ -75,6 +75,7 @@ function am_save_options($container, $activeTab, $options ) {
 
     if ( empty( $am_options['am_api_key'] ) ||
         empty( $am_options['am_update_blocks_table'] ) ) {
+        var_dump("ca passe dans le return");
         return;
     }
 
@@ -84,10 +85,14 @@ function am_save_options($container, $activeTab, $options ) {
         'wordpress_plugin_version' => am_get_version(),
     );
 
+    var_dump("la data c'est ca");
+    var_dump($data);
+
     $response = am_curl( $am_options['am_api_key'], $data );
 
     $parsed_response = json_decode($response, true);
 
+    var_dump($parsed_response);
     am_set_connection_status( $parsed_response );
 }
 
