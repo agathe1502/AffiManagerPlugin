@@ -88,7 +88,7 @@ function am_save_options($container, $activeTab, $options ) {
 
     am_set_connection_status( $parsed_response );
 
-    am_redirect_to_form();
+    wp_redirect($_SERVER['HTTP_REFERER']);
 }
 
 add_action( 'tf_save_admin_am', 'am_save_options', 10, 3 );
