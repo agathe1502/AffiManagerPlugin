@@ -57,7 +57,7 @@ function create_missing_files_after_update() {
     // Création des fichiers s'ils existent (supprimés lors d'une mise à jour du plugin)
     $previous_file_update_db = AM_PATH . $am_options->getOption( 'am_update_blocks_table' );
     if ( !file_exists( $previous_file_update_db ) && $previous_file_update_db != AM_PATH) {
-        $content = "<?php require_once '" . AM_PATH . "am-update-blocks-table.php';";
+        $content = "C'est ici que ca créé dans create missing files'<?php require_once '" . AM_PATH . "am-update-blocks-table.php';";
         file_put_contents( $previous_file_update_db, $content );
     }
 }
@@ -70,6 +70,8 @@ function am_save_options($container, $activeTab, $options ) {
     }
 
     $am_options = maybe_unserialize( get_option( 'am_options' ) );
+
+    var_dump($am_options['am_api_key']);
 
     if ( empty( $am_options['am_api_key'] ) ||
         empty( $am_options['am_update_blocks_table'] ) ) {

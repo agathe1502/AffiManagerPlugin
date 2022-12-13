@@ -6,7 +6,7 @@
  * @license     GPL-3.0+
  * Plugin Name: AffiManager
  * Description: Mise à jour des sites depuis la plateforme affimanager.nilys.com
- * Version:     0.0.1
+ * Version:     0.0.2
  * Text Domain: AffiManager
  * License:     GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
@@ -27,7 +27,6 @@ class AmPlugin {
 		register_activation_hook( __FILE__, 'am_install' );
 		register_deactivation_hook( __FILE__, 'am_uninstall' );
 
-        add_action( 'after_delete_post', array( $this, 'after_delete_post' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'am_load_scripts'));
         // Envoi le num de la nouvelle version
         add_action( 'upgrader_process_complete', array( $this, 'am_send_updated_version'), 10, 2);
