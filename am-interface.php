@@ -86,8 +86,9 @@ function am_save_options($container, $activeTab, $options ) {
 
     $parsed_response = json_decode($response, true);
 
-    var_dump($parsed_response);
     am_set_connection_status( $parsed_response );
+
+    am_get_connection_status();
 }
 
 add_action( 'tf_save_admin_am', 'am_save_options', 10, 3 );
@@ -121,7 +122,7 @@ function am_curl($api_key, $data ) {
 
 function am_get_connection_status() {
 
-    var_dump('get statuses');
+    // TODO: Cette fonction est appelée avant d'avoir mis à jour le statut en BDD du coup, après avoir enregistré, on n'a pas le bon statut et on croit que l'API key n'est pas la bonne
 
     $connection_statuses = array(
         'fail'                => __( 'Unsuccessful connection!', AM_ID_LANGUAGES ),
