@@ -1,0 +1,1702 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-09-16 18:31+0300\n"
+"PO-Revision-Date: 2019-09-16 18:32+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SourceCharset: iso-8859-15\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class/class-checked-import-external-images.php:91
+msgid "Image is empty"
+msgstr "Pas d'image"
+
+#: class/checked-class-lists.php:64
+msgid "this entry"
+msgstr "cette entrée"
+
+#: class/checked-class-lists.php:64 class/checked-class-lists.php:149
+msgid "Delete from list"
+msgstr "Supprimer de la liste"
+
+#: class/checked-class-lists.php:65
+msgid "See item"
+msgstr "Voir l'article"
+
+#: class/checked-class-lists.php:83
+msgid "Unknown title OR Deleted post"
+msgstr "Titre inconnu OU article supprimé"
+
+#: class/checked-class-lists.php:120
+msgid "Date"
+msgstr "Date"
+
+#: class/checked-class-lists.php:121
+msgid "Featured Image"
+msgstr "Image à la une"
+
+#: class/checked-class-lists.php:122
+msgid "Submitted Posts"
+msgstr "Articles soumis"
+
+#: class/checked-class-lists.php:150
+msgid "Delete All list"
+msgstr "Supprimer toute la liste"
+
+#: includes/checked-dashboard.php:12
+msgid "API"
+msgstr "API"
+
+#: includes/checked-dashboard.php:18
+msgid "API key"
+msgstr "Clé API"
+
+#: includes/checked-dashboard.php:20
+msgid "Fill in your key (API)"
+msgstr "Renseignez votre clé (API)"
+
+#: includes/checked-interface.php:33
+msgid "Settings"
+msgstr "Paramétrage"
+
+#: includes/checked-dashboard.php:35
+#| msgid "select at least one category"
+msgid "Please tick at least 1 category."
+msgstr "Veuillez cocher au moins 1 catégorie."
+
+#: includes/checked-dashboard.php:41
+msgid "Categories where Ereferer can submit an article"
+msgstr "Catégories où Ereferer peut soumettre un article"
+
+#: includes/checked-dashboard.php:43
+msgid "Select at least one category"
+msgstr "Sélectionnez au moins une catégorie"
+
+#: includes/checked-dashboard.php:67
+msgid "Author"
+msgstr "Auteur"
+
+#: includes/checked-dashboard.php:80
+msgid "Status of sent items"
+msgstr "Statut des articles envoyés"
+
+#: includes/checked-dashboard.php:82
+msgid "Directly published (recommended):"
+msgstr "Directement publié (recommandé):"
+
+#: includes/checked-dashboard.php:83
+msgid "Waiting for proofreading:"
+msgstr "En attente de relecture:"
+
+#: includes/checked-dashboard.php:86
+msgid ""
+"WARNING! If you choose the status \"pending replay\", you only have 15 days to "
+"validate the article. After this time, your site will go into idle on Ereferer "
+"and will be disabled."
+msgstr ""
+"ATTENTION! Si vous choisissez le statut \"en attente de relecture\", vous ne "
+"disposez que de 15 jours pour valider l'article. Passé ce délai, votre site "
+"passera en inactif sur Ereferer et sera désactivé."
+
+#: includes/checked-dashboard.php:92
+msgid "Wordpress menu name (optional)"
+msgstr "Nom du menu Wordpress (facultatif)"
+
+#: includes/checked-dashboard.php:98
+msgid "Are modifications possible?"
+msgstr "Modifications possibles?"
+
+#: includes/checked-dashboard.php:100
+msgid "Yes"
+msgstr "Oui"
+
+#: includes/checked-dashboard.php:101
+msgid "No"
+msgstr "Non"
+
+#: includes/checked-dashboard.php:104
+msgid ""
+"Partners will be allowed to make corrections to their articles. However, they "
+"will not be able to add / modify / delete a link to prevent abuse."
+msgstr ""
+"Les partenaires seront autorisés à apporter des corrections à leurs articles. "
+"Ils ne pourront toutefois pas ajouter/modifier/supprimer un lien pour éviter "
+"tout abus."
+
+#: includes/checked-dashboard.php:121
+#, php-format
+msgid "Fill in all <a href=\"%s\">dashboard options</a>"
+msgstr "Renseignez toutes <a href=\"%s\">les options</a>"
+
+#: includes/checked-lists.php:11 includes/checked-lists.php:27
+#: includes/checked-lists.php:67
+msgid "Summary"
+msgstr "Récapitulatif"
+
+#: includes/checked-lists.php:55
+#, php-format
+msgid "Entry(s) successfully deleted : %d"
+msgstr "Entrée(s) supprimée(s) avec succès : %d"
+
+#: includes/checked-lists.php:58
+msgid "All entries successfully deleted"
+msgstr "Toutes les entrées ont été supprimé avec succès"
+
+#: includes/checked-lists.php:70
+msgid "Back to options"
+msgstr "Retour aux options"
+
+#: checked-interface.php:29
+msgid "All items"
+msgstr "Tous les articles"
+
+#: checked-interface.php:59
+msgid "Save"
+msgstr "Enregistrer"
+
+#: checked-interface.php:33
+msgid "Unsuccessful connection!"
+msgstr "La connexion a échoué."
+
+#: checked-interface.php:137
+msgid "Login successful!"
+msgstr "Connexion réussie!"
+
+#: checked-interface.php:138
+msgid ""
+"A firewall seems to block the connection of the plugin. You must unblock the IP "
+"5.179.192.81 so that the connection can be made!"
+msgstr ""
+"A firewall seems to block the connection of the plugin. You must unblock the IP "
+"5.179.192.81 so that the connection can be made!"
+
+#: checked-interface.php:139
+msgid "The connection failed. Check that you have added your site to SitesNilys."
+msgstr ""
+"La connexion a échoué. Vérifiez que vous ayez bien ajouté votre site sur SitesNilys."
+
+#: checked-post-endpoint.php:27
+msgid "Incorrect API key."
+msgstr "Clé d'API incorrecte."
+
+#: checked-post-endpoint.php:45
+msgid "Success connection"
+msgstr "Connexion de succès"
+
+#: checked-post-endpoint.php:55
+msgid "Post id can't be empty."
+msgstr "L'identifiant du post ne peut être vide."
+
+#: checked-post-endpoint.php:66
+msgid "Post title and content can't be empty."
+msgstr "Le titre et le contenu de l'article ne peuvent être vides."
+
+#: checked-post-endpoint.php:92
+msgid "Posts are not editable."
+msgstr "Les messages ne sont pas modifiables."
+
+#: checked-post-endpoint.php:188
+msgid "Success"
+msgstr "Succès"
+
+#: lib/plugin-update-checker/Puc/v4p4/Plugin/Ui.php:54
+msgid "View details"
+msgstr "Voir les options"
+
+#: lib/plugin-update-checker/Puc/v4p4/Plugin/Ui.php:77
+#, php-format
+msgid "More information about %s"
+msgstr "Informations sur la licence"
+
+#: lib/plugin-update-checker/Puc/v4p4/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr ""
+
+#: lib/plugin-update-checker/Puc/v4p4/Plugin/Ui.php:223
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr ""
+
+#: lib/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr ""
+
+#: lib/titan-framework/inc/edd-licensing/EDD_SL_Plugin_Updater.php:189
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+"Nouvelle version disponible de %1$s. %2$sVoir la version %3$s détails%4$s."
+
+#: lib/titan-framework/inc/edd-licensing/EDD_SL_Plugin_Updater.php:197
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s or "
+"%5$supdate now%6$s."
+msgstr ""
+"Nouvelle version disponible de %1$s. %2$sVoir la version %3$s détails%4$s or "
+"%5$sMettre à jour maintenant%6$s."
+
+#: lib/titan-framework/inc/edd-licensing/EDD_SL_Plugin_Updater.php:340
+msgid "You do not have permission to install plugin updates"
+msgstr "Vous ne possédez les droits pour installer ce plugin"
+
+#: lib/titan-framework/inc/edd-licensing/EDD_SL_Plugin_Updater.php:340
+msgid "Error"
+msgstr "Erreur"
+
+#: lib/titan-framework/lib/class-admin-page.php:124
+msgid ""
+"<em>Options Page Created with <a href='http://titanframework.net?"
+"utm_source=admin&utm_medium=admin footer'>Titan Framework</a></em>"
+msgstr ""
+"<em>Page d'options créées avec le <a href='http://titanframework.net?"
+"utm_source=admin&utm_medium=admin footer'>Framework Titan</a></em>"
+
+#: lib/titan-framework/lib/class-admin-page.php:370
+msgid "Settings saved."
+msgstr "Paramètres sauvegardés."
+
+#: lib/titan-framework/lib/class-admin-page.php:372
+msgid "Settings reset to default."
+msgstr "Réinitialisation des paramètres par défaut."
+
+#: lib/titan-framework/lib/class-customizer.php:33
+#: lib/titan-framework/lib/class-meta-box.php:37
+msgid "More Options"
+msgstr "Plus d'options"
+
+#: lib/titan-framework/lib/class-option-ajax-button.php:30
+#: lib/titan-framework/lib/class-option-ajax-button.php:33
+msgid "Security check failed, please refresh the page and try again."
+msgstr "La vérification de la sécurité a échoué, actualisez la page et réessayez."
+
+#: lib/titan-framework/lib/class-option-ajax-button.php:87
+msgid "Something went wrong"
+msgstr "Quelque chose s'est mal passé"
+
+#: lib/titan-framework/lib/class-option-ajax-button.php:95
+msgid "Click me"
+msgstr "Cliquez moi"
+
+#: lib/titan-framework/lib/class-option-ajax-button.php:100
+msgid "Please wait..."
+msgstr "Attendez..."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:379
+msgid "Theme License"
+msgstr "Licence de thème"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:380
+msgid "Enter your theme license key."
+msgstr "Entrez votre numéro de licence"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:381
+msgid "License Key"
+msgstr "Numéro de la licence"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:382
+msgid "License Action"
+msgstr "Action de licence"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:383
+msgid "Deactivate License"
+msgstr "Désactivation de la licence"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:384
+msgid "Activate License"
+msgstr "Activation de la licence"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:385
+#: lib/titan-framework/lib/class-option-edd-license.php:397
+msgid "License status is unknown."
+msgstr "Statut de la licence inconnu"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:386
+msgid "Renew?"
+msgstr "Renouvelez ?"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:387
+msgid "unlimited"
+msgstr "illimité"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:388
+msgid "License key is active."
+msgstr "Numéro de licence activée."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:389
+#, php-format
+msgid "Expires %s."
+msgstr "Expiration %s."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:390
+#, php-format
+msgid "You have %1$s / %2$s sites activated."
+msgstr "Vous avez %1$s / %2$s sites activés."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:391
+#, php-format
+msgid "License key expired %s."
+msgstr "Le numéro de licence est expiré %s."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:392
+msgid "License key has expired."
+msgstr "Le numéro de licence a expiré."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:393
+msgid "License keys do not match."
+msgstr "Le numéro de licence ne correspond pas"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:394
+msgid "License is inactive."
+msgstr "La licence est inactive."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:395
+msgid "License key is disabled."
+msgstr "Le numéro de licence est désactivé."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:396
+msgid "Site is inactive."
+msgstr "Site inactif"
+
+#: lib/titan-framework/lib/class-option-edd-license.php:398
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+"La mise à jour de ce thème perdra toute personnalisation que vous avez faite. "
+"'Annuler' pour arrêter, 'OK' pour mettre à jour."
+
+#: lib/titan-framework/lib/class-option-edd-license.php:399
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</a>."
+msgstr ""
+"<strong>%1$s %2$s</strong> est disponible. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Découvrez les nouveautés</a> ou <a href=\"%5$s\"%6$s>mettre à "
+"jour maintenant</a>."
+
+#: lib/titan-framework/lib/class-option-enable.php:62
+#: lib/titan-framework/lib/class-option-enable.php:141
+msgid "Enabled"
+msgstr "Activé"
+
+#: lib/titan-framework/lib/class-option-enable.php:65
+#: lib/titan-framework/lib/class-option-enable.php:144
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: lib/titan-framework/lib/class-option-multicheck-pages.php:28
+#: lib/titan-framework/lib/class-option-multicheck-pages.php:49
+#: lib/titan-framework/lib/class-option-multicheck-posts.php:35
+#: lib/titan-framework/lib/class-option-multicheck-posts.php:61
+#: lib/titan-framework/lib/class-option-select-pages.php:34
+#: lib/titan-framework/lib/class-option-select-posts.php:49
+#, php-format
+msgid "Untitled %s"
+msgstr "Sans titre %s"
+
+#: lib/titan-framework/lib/class-option-multicheck.php:40
+#: lib/titan-framework/lib/class-option-multicheck.php:189
+msgid "Select All"
+msgstr "Sélectionnez"
+
+#: lib/titan-framework/lib/class-option-save.php:21
+msgid "Save Changes"
+msgstr "Sauvegardez les changements"
+
+#: lib/titan-framework/lib/class-option-save.php:24
+msgid "Reset to Defaults"
+msgstr "Réinitialiser par défaut"
+
+#: lib/titan-framework/lib/class-option-save.php:27
+msgid "Are you sure you want to reset ALL options to their default values?"
+msgstr ""
+"Etes vous sûr de vouloir remettre TOUTES les options à leurs valeurs par "
+"défaut ?"
+
+#: lib/titan-framework/lib/class-option-select-categories.php:35
+#: lib/titan-framework/lib/class-option-select-pages.php:27
+#: lib/titan-framework/lib/class-option-select-post-types.php:27
+#: lib/titan-framework/lib/class-option-select-posts.php:43
+msgid "Select"
+msgstr "Sélectionnez"
+
+#: lib/titan-framework/lib/class-option.php:119
+#, php-format
+msgid "Option type or extended class %s does not exist."
+msgstr "Le type d'option ou la classe étendue %s n'existe pas"
+
+#: lib/titan-framework/lib/class-titan-framework.php:190
+#, php-format
+msgid ""
+"All option IDs per namespace must be unique. The id %s has been used multiple "
+"times."
+msgstr ""
+"Tous IDs d'options par namespace doit être unique. Cet id %s a été utilisé "
+"plusieurs fois."
+
+#: lib/titan-framework/lib/class-titan-framework.php:445
+#, php-format
+msgid "%s needs a %s parameter."
+msgstr "%s a besoin d'un paramètre %s."
+
+#: lib/titan-framework/lib/class-titan-framework.php:455
+#, php-format
+msgid "Container of type %s, does not exist."
+msgstr "Le type de conteneur %s n'existe pas."
+
+#: lib/titan-framework/titan-framework-checker.php:72
+msgid "Titan Framework needs to be installed."
+msgstr "Le Framework Titan doit être installé."
+
+#: lib/titan-framework/titan-framework-checker.php:75
+msgid "Click here to search for the plugin."
+msgstr "Cliquez ici pour rechercher le plugin."
+
+#: lib/titan-framework/titan-framework-checker.php:82
+msgid "Titan Framework needs to be activated."
+msgstr "Le Framework Titan a besoin d'être activé"
+
+#: lib/titan-framework/titan-framework-checker.php:85
+msgid "Click here to go to the plugins page and activate it."
+msgstr "Cliquez ici pour aller à la page des plugins et l'activer."
+
+#: lib/titan-framework/titan-framework.php:188
+msgid "Documentation"
+msgstr "Documentation"
+
+#: lib/titan-framework/titan-framework.php:192
+msgid "GitHub Repo"
+msgstr "GitHub Repo"
+
+#: lib/titan-framework/titan-framework.php:196
+msgid "Issue Tracker"
+msgstr "Issue Tracker"
+
+#~ msgid "Authorized Categories for Editors"
+#~ msgstr "Catégories autorisées pour les rédacteurs"
+
+#~ msgid "Website URL"
+#~ msgstr "URL du site web"
+
+#~ msgid "Plugin URL"
+#~ msgstr "URL du plugin"
+
+#~ msgid "Unknown title"
+#~ msgstr "Titre inconnu"
+
+#~ msgid "Post"
+#~ msgstr "Articles soumis"
+
+#~ msgid "--"
+#~ msgstr "--"
+
+#~ msgid "Update"
+#~ msgstr "Modifier"
+
+#~ msgid "this product"
+#~ msgstr "ce produit"
+
+#~ msgid "Delete"
+#~ msgstr "Supprimer"
+
+#~ msgid "See product"
+#~ msgstr "Voir le produit"
+
+#~ msgid "See order"
+#~ msgstr "Voir la commande"
+
+#~ msgid "No orders"
+#~ msgstr "Pas de commande"
+
+#~ msgid "Product"
+#~ msgstr "Produit"
+
+#~ msgid "Buyer"
+#~ msgstr "Acheteur"
+
+#~ msgid "Status"
+#~ msgstr "Statut"
+
+#~ msgid "Order date"
+#~ msgstr "Date de commande"
+
+#~ msgid "Choose a product"
+#~ msgstr "Choisissez un produit"
+
+#~ msgid "Add"
+#~ msgstr "Ajouter"
+
+#~ msgid "Product saved successfully"
+#~ msgstr "Produit sauvegardé avec succès"
+
+#~ msgid "ERROR when saving the product"
+#~ msgstr "ERREUR lors de la sauvegarde du produit"
+
+#~ msgid "Product updated successfully"
+#~ msgstr "Produit modifié avec succès"
+
+#~ msgid "<br>Comment: "
+#~ msgstr "<br>Commentaire : "
+
+#~ msgid "<br>Email sent to the administrators ("
+#~ msgstr "<br>Email envoyé aux administrateurs ("
+
+#~ msgid "<br>Error sending email to administrators"
+#~ msgstr "<br>Erreur lors de l'envoi de l'email aux administrateurs"
+
+#~ msgid "<br>Email sent to client ("
+#~ msgstr "<br>Email envoyé au client ("
+
+#~ msgid "<br>Error sending email to client"
+#~ msgstr "<br>Erreur lors de l'envoi de l'email au client"
+
+#~ msgid "ERROR when editing product (no information changed)"
+#~ msgstr ""
+#~ "ERREUR lors de la modification du produit (aucune information modifiée)"
+
+#~ msgid "Product not found"
+#~ msgstr "Produit introuvable"
+
+#~ msgid "Edit product :: "
+#~ msgstr "Modification du produit :: "
+
+#~ msgid "Edit a List product :: "
+#~ msgstr "Modifier un produit de la liste :: "
+
+#~ msgid "Back to lists"
+#~ msgstr "Retour aux listes"
+
+#~ msgid "Back to the products of this list"
+#~ msgstr "Retour aux produits de la liste"
+
+#~ msgid "OR"
+#~ msgstr "OU"
+
+#~ msgid "Save and send email"
+#~ msgstr "Sauvegarder et envoyer un email"
+
+#~ msgid "Buyer comment"
+#~ msgstr "Commentaire de l'acheteur"
+
+#~ msgid ""
+#~ "Do not indicate anything if no comment.<br>It will not be saved if it was "
+#~ "not dropped during an Internet order.<br>It will just insert in the email "
+#~ "sent if you click the \"Save and send email\" button\n"
+#~ msgstr ""
+#~ "N'indiquez rien si pas de commentaire.<br>Ne sera pas sauvegardé si celui-ci "
+#~ "n'a pas été déposé lors d'une commande Internet.<br>Il sera juste insérer "
+#~ "dans l'email envoyé si vous cliquez sur le bouton \"Sauvegarder et envoyer "
+#~ "un email\"\n"
+
+#~ msgid "ISO Format ( YYYY-MM-DD HH:MM:SS )"
+#~ msgstr "Format ISO ( YYYY-MM-DD HH:MM:SS )"
+
+#~ msgid "Buyer name"
+#~ msgstr "Nom de l'acheteur"
+
+#~ msgid "Buyer comment (Enabled)"
+#~ msgstr "Commentaire de l'acheteur (Activé)"
+
+#~ msgid "Buyer comment (Disabled)"
+#~ msgstr "Commentaire de l'acheteur (Désactivé)"
+
+#~ msgid "Product status is required"
+#~ msgstr "Le statut du produit est obligatoire"
+
+#~ msgid "Product name is required"
+#~ msgstr "Le nom du produit est obligatoire"
+
+#~ msgid "Undeletable"
+#~ msgstr "Insupprimable"
+
+#~ msgid "this type"
+#~ msgstr "ce statut"
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "Description"
+#~ msgstr "Description"
+
+#~ msgid "Add type"
+#~ msgstr "Ajouter un statut"
+
+#~ msgid "Edit type"
+#~ msgstr "Modifier le statut"
+
+#~ msgid "Status name of your product."
+#~ msgstr "Nom du statut du produit"
+
+#~ msgid "Status description. You can leave it blank."
+#~ msgstr "Description du statut. Vous pouvez le laisser vide."
+
+#~ msgid "Required fields"
+#~ msgstr "Champs obligatoires"
+
+#~ msgid "Add new type"
+#~ msgstr "Ajouter un nouveau statut"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
+
+#~ msgid "Type saved successfully"
+#~ msgstr "Statut sauvegardé avec succès"
+
+#~ msgid "ERROR when saving list"
+#~ msgstr "ERREUR lors de la sauvegarde de la liste"
+
+#~ msgid "Type updated successfully"
+#~ msgstr "Statut mis à jour avec succès"
+
+#~ msgid "ERROR when editing type (no information changed)"
+#~ msgstr "ERREUR lors de la modification du statut (aucune information modifiée)"
+
+#~ msgid "Type not found"
+#~ msgstr "Statut introuvable"
+
+#~ msgid "Type :: "
+#~ msgstr "Statut :: "
+
+#~ msgid "Back to types"
+#~ msgstr "Retour aux statuts"
+
+#~ msgid "See products"
+#~ msgstr "Voir les produits"
+
+#~ msgid "Type title"
+#~ msgstr "Titre du statut"
+
+#~ msgid "Type name"
+#~ msgstr "Nom du statut"
+
+#~ msgid "Type title is required"
+#~ msgstr "Le titre du statut est obligatoire"
+
+#~ msgid "this list"
+#~ msgstr "cette liste"
+
+#~ msgid "Products"
+#~ msgstr "Produits"
+
+#~ msgid "List"
+#~ msgstr "Liste"
+
+#~ msgid "Creator"
+#~ msgstr "Créateur"
+
+#~ msgid "Firstname"
+#~ msgstr "Prénom"
+
+#~ msgid "Lastname"
+#~ msgstr "Nom"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Product(s)"
+#~ msgstr "Produit(s)"
+
+#~ msgid "Active"
+#~ msgstr "Activé"
+
+#~ msgid "List updated successfully"
+#~ msgstr "Liste modifiée avec succès"
+
+#~ msgid "ERROR when editing list (no information changed)"
+#~ msgstr ""
+#~ "ERREUR lors de la modification de la liste (aucune information modifiée)"
+
+#~ msgid "List not found"
+#~ msgstr "Liste introuvable"
+
+#~ msgid "Edit list"
+#~ msgstr "Modifier la liste"
+
+#~ msgid "List :: "
+#~ msgstr "Liste :: "
+
+#~ msgid "YES"
+#~ msgstr "OUI"
+
+#~ msgid "NO"
+#~ msgstr "NON"
+
+#~ msgid "List name"
+#~ msgstr "Nom de la liste"
+
+#~ msgid "Your Email"
+#~ msgstr "Votre email"
+
+#~ msgid "List name is required"
+#~ msgstr "Le nom de la liste est obligatoire"
+
+#~ msgid "Firstname is required"
+#~ msgstr "Le prénom est obligatoire"
+
+#~ msgid "Lastname is required"
+#~ msgstr "Le nom est obligatoire"
+
+#~ msgid "Email is required"
+#~ msgstr "L'email est obligatoire"
+
+#~ msgid "The email has an incorrect format"
+#~ msgstr "L'email ne possède pas un format correct"
+
+#~ msgid "Title:"
+#~ msgstr "Titre :"
+
+#~ msgid "All lists"
+#~ msgstr "Toutes les listes"
+
+#~ msgid "Search"
+#~ msgstr "Recherche"
+
+#~ msgid "Automatic emails"
+#~ msgstr "Emails automatiques"
+
+#~ msgid "License"
+#~ msgstr "Licence"
+
+#~ msgid "Credits"
+#~ msgstr "Crédits"
+
+#~ msgid "Dashboard"
+#~ msgstr "Tableau de bord"
+
+#~ msgid "For sale"
+#~ msgstr "A vendre"
+
+#~ msgid "Product available for sale"
+#~ msgstr "Produit disponible à la vente"
+
+#~ msgid "Internet purchase"
+#~ msgstr "Achat Internet"
+
+#~ msgid "Purchase on e-commerce online shop"
+#~ msgstr "Achat sur la boutique e-commerce en ligne"
+
+#~ msgid "Purchase in proshop (withdrawal in prostore)"
+#~ msgstr "Achat en Boutique (retrait en boutique)"
+
+#~ msgid "Purchase in proshop can by retrieved by the owner of the list"
+#~ msgstr ""
+#~ "Achat en boutique à venir retirer en boutique par le propriétaire de la liste"
+
+#~ msgid "Purchase in proshop (taken by the buyer)"
+#~ msgstr "Achat en Boutique (emporté par le l'acheteur)"
+
+#~ msgid "Purchase in proshop was taken by the buyer"
+#~ msgstr "L'achat en boutique a été emporté par l'acheteur"
+
+#~ msgid "My lists"
+#~ msgstr "Mes listes"
+
+#~ msgid "Search list"
+#~ msgstr "Rechercher une liste"
+
+#~ msgid "Donate"
+#~ msgstr "Encouragement"
+
+#~ msgid "About"
+#~ msgstr "A propos"
+
+#~ msgid "Once every 1 minute"
+#~ msgstr "Chaque minute"
+
+#~ msgid "Once every 2 minutes"
+#~ msgstr "Toutes les 2 minutes"
+
+#~ msgid "Once every 5 minutes"
+#~ msgstr "Toutes les 5 minutes"
+
+#~ msgid "Once every 10 minutes"
+#~ msgstr "Toutes les 10 minutes"
+
+#~ msgid "Once every 30 minutes"
+#~ msgstr "Toutes les 30 minutes"
+
+#~ msgid "CREDITS"
+#~ msgstr "CRÉDITS"
+
+#~ msgid "Developed and maintained by"
+#~ msgstr "Développé et maintenu par"
+
+#~ msgid "Written with "
+#~ msgstr "Ecrit avec "
+
+#~ msgid "SUPPORT"
+#~ msgstr "SUPPORT"
+
+#~ msgid "Support contact"
+#~ msgstr "Contactez le support"
+
+#~ msgid ""
+#~ "To contact us, You have to indicate us all the information of your license "
+#~ "(License Created Date, License Date of Expiry, License Email, License Number "
+#~ "for Domain, License Registered Domain, License Item Reference)"
+#~ msgstr ""
+#~ "Pour nous contacter, vous devez nous indiquer les informations de votre "
+#~ "licence (Date de création, date d'expiration, email, numéro de licence pour "
+#~ "le domaine, le nom de domaine enregistré, la référence)"
+
+#~ msgid ""
+#~ "Disabled<br>The WooCommerce plugin must be installed and enabled to use this "
+#~ "plugin"
+#~ msgstr ""
+#~ "Désactivé<br>Le plugin WooCommerce doit être installé et activé pour "
+#~ "utiliser ce plugin"
+
+#~ msgid "version"
+#~ msgstr "version"
+
+#~ msgid "Checks"
+#~ msgstr "Vérifications"
+
+#~ msgid "Check WooCommerce plugin"
+#~ msgstr "Vérification plugin WooCommerce"
+
+#~ msgid "Recommended minimum version 3.0.x"
+#~ msgstr "Version minimum conseillée 3.0.x"
+
+#~ msgid ""
+#~ "Inactive<br>Activation required to receive your emails notifications.<br>See "
+#~ "the DISABLE_WP_CRON constant in the wp-config.php file."
+#~ msgstr ""
+#~ "Désactivé<br>Activation requise pour recevoir vos notifications par email."
+#~ "<br> Voir la constante DISABLE_WP_CRON dans le fichier wp-config.php."
+
+#~ msgid "Check Cron WP"
+#~ msgstr "Vérification Cron WP"
+
+#~ msgid "WP Crons: "
+#~ msgstr "Crons WP : "
+
+#~ msgid "Check Emails settings"
+#~ msgstr "Vérification des paramètres d'Emails automatiques"
+
+#~ msgid "You must SAVE your Automatic emails settings."
+#~ msgstr "Vous devez SAUVEGARDER vos paramètres d'Emails automatiques"
+
+#~ msgid "Enter your License number"
+#~ msgstr "Saisissez votre numéro de licence"
+
+#~ msgid "License number"
+#~ msgstr "Numéro de licence"
+
+#~ msgid "Main page link"
+#~ msgstr "Lien page principale"
+
+#~ msgid "Search page link"
+#~ msgstr "Lien page de recherche"
+
+#~ msgid "Welcome to the %s plugin"
+#~ msgstr "Bienvenue dans le plugin %s"
+
+#~ msgid "ADMINISTRATION"
+#~ msgstr "ADMINISTRATION"
+
+#~ msgid ""
+#~ "Manage your lists (list of associated products, order date, list status, "
+#~ "offered by xxx, purchase in shop or on the Internet)"
+#~ msgstr ""
+#~ "Gérer vos listes (liste des produits associés, date des commandes, statut de "
+#~ "la liste, offert par xxx, achat en boutique ou sur Internet)"
+
+#~ msgid "Manage your types (status of your products)"
+#~ msgstr "Gérer vos statuts (Les statuts / types de vos produits)"
+
+#~ msgid ""
+#~ "Update the products of a list (Date of purchase, modification of the product "
+#~ "status (purchase shop, internet purchase), addition of the buyer's name, "
+#~ "automatic email to the creator of the list)"
+#~ msgstr ""
+#~ "Modifier des produits d'une liste (Date d'achat, modification du statut "
+#~ "produit (achat boutique, achat internet), ajout du nom de l'acheteur, email "
+#~ "automatique au créateur de la liste)"
+
+#~ msgid ""
+#~ "Automatic email management (Subject / Creator email body of the list, "
+#~ "Subject / Body of the administrator's email, management of emails "
+#~ "administrators)"
+#~ msgstr ""
+#~ "Gestion de l'email automatique (Sujet / Corps de l'email du créateur de la "
+#~ "liste, sujet / Corps de l'email de l'administeur, gestion des emails "
+#~ "administrateurs)"
+
+#~ msgid "VISITORS"
+#~ msgstr "VISITEURS"
+
+#~ msgid "Accessible lists only from search (additional to WooCommerce)"
+#~ msgstr ""
+#~ "Listes accessibles uniquement depuis la recherche (additionnelle à celle de "
+#~ "WooCommerce)"
+
+#~ msgid "Products list from the WooCommerce plugin"
+#~ msgstr "Liste produits provenant du plugin WooCommerce"
+
+#~ msgid "Viewing a product in a list outside WooCommerce"
+#~ msgstr "Visualisation d'un produit dans une liste hors WooCommerce"
+
+#~ msgid "Purchasing products from the list (ajax button)"
+#~ msgstr "Achat des produits depuis la liste"
+
+#~ msgid "Checkout - Possibility to leave a message with the order"
+#~ msgstr "Checkout - possibilité de laisser un message à la commande"
+
+#~ msgid "Checkout - Email alert (creator of list / administrator)"
+#~ msgstr "Checkout - alerte email (créateur de la liste / administrateur)"
+
+#~ msgid "Display of messages left on the list during orders"
+#~ msgstr "Affichage des messages laissés sur la liste lors des commandes"
+
+#~ msgid "Email header"
+#~ msgstr "Entête de l'email"
+
+#~ msgid "Administrator Response Email"
+#~ msgstr "Email de réponse de l'administrateur"
+
+#~ msgid "Name of Administrator"
+#~ msgstr "Nom de l'administrateur"
+
+#~ msgid "Email(s)"
+#~ msgstr "Email(s)"
+
+#~ msgid "Administrator(s) Email(s)"
+#~ msgstr "Email(s) administrateur(s)"
+
+#~ msgid "If multiple emails, separate them with commas without space"
+#~ msgstr "Si plusieurs emails, séparez les par des virgules sans espaces"
+
+#~ msgid "Automatic emails (Subject / Body) - Creator of the list"
+#~ msgstr "Emails automatiques (Sujet / Body) - Créateur de la liste"
+
+#~ msgid "Subject (Creator of the list)"
+#~ msgstr "Sujet (créateur de la liste)"
+
+#~ msgid "Variable to place:"
+#~ msgstr "Variable possible"
+
+#~ msgid "A product purchased on one of your lists \"{ILIST_NAME}\""
+#~ msgstr "Un produit acheté sur une de vos listes \"{ILIST_NAME}\""
+
+#~ msgid "Email body (Creator of the list)"
+#~ msgstr "Corps de l'email (créateur de la liste)"
+
+#~ msgid "Variables to place:"
+#~ msgstr "Variables possibles"
+
+#~ msgid "List name (Creator of the list)"
+#~ msgstr "Nom de la liste (créateur de la liste)"
+
+#~ msgid "Name of the offered product(s)"
+#~ msgstr "Nom des produits offerts"
+
+#~ msgid "Offered by"
+#~ msgstr "Offert par"
+
+#~ msgid "Purchase Type"
+#~ msgstr "Type d'achat"
+
+#~ msgid "Comment"
+#~ msgstr "Commentaire"
+
+#~ msgid "Wordpress Site Name"
+#~ msgstr "Nom du site Wordpress"
+
+#~ msgid ""
+#~ "Hello,<br><br>A product (or more) has just been purchased on one of your "
+#~ "lists:<br><br>List Name: {ILIST_NAME}<br>Product(s) Name: {ILIST_PRODUCT}"
+#~ "<br>By: {ILIST_FRIEND}<br>Date: {ILIST_DATE}<br>Purchase Type: {ILIST_TYPE}"
+#~ "<br>Comment: {ILIST_COMMENT}<br><br>{ILIST_WP_SITE_NAME} {ILIST_WP_SITE_DESC}"
+#~ "<br>See you soon"
+#~ msgstr ""
+#~ "Bonjour,<br><br>Un produit (ou plus) vient d'être acheté sur une de vos "
+#~ "listes :<br><br>Nom de la liste : {ILIST_NAME}<br>Nom des produits : "
+#~ "{ILIST_PRODUCT}<br>Par : {ILIST_FRIEND}<br>Le : {ILIST_DATE}<br>Type "
+#~ "d'achat : {ILIST_TYPE}<br>Commentaire : {ILIST_COMMENT}"
+#~ "<br><br>{ILIST_WP_SITE_NAME} {ILIST_WP_SITE_DESC}<br>A bientôt"
+
+#~ msgid "Automatic emails (Subject / Body) - Administrators"
+#~ msgstr "Emails automatiques (Sujet / Body) - Administrateurs"
+
+#~ msgid "Subject (Administrator(s))"
+#~ msgstr "Sujet (administrateur(s))"
+
+#~ msgid "A product purchased on the list \"{ILIST_NAME}\""
+#~ msgstr "Un produit acheté sur la liste \"{ILIST_NAME}\""
+
+#~ msgid "Email body (Administrator(s))"
+#~ msgstr "Corps de l'email (administrateur(s))"
+
+#~ msgid ""
+#~ "Hello,<br><br>A product (or more) has just been purchased from a list:"
+#~ "<br><br>List: {ILIST_NAME}<br>Product(s) Name: {ILIST_PRODUCT}<br>By: "
+#~ "{ILIST_FRIEND}<br>Date: {ILIST_DATE}<br>Purchase Type: {ILIST_TYPE}"
+#~ "<br>Comment: {ILIST_COMMENT}<br><br>The administrator {ILIST_WP_SITE_NAME} "
+#~ "{ILIST_WP_SITE_DESC}"
+#~ msgstr ""
+#~ "Bonjour,<br><br>Un produit (ou plus) vient d'être acheté sur une liste :"
+#~ "<br><br>Liste : {ILIST_NAME}<br>Nom des produits : {ILIST_PRODUCT}<br>Par : "
+#~ "{ILIST_FRIEND}<br>Le : {ILIST_DATE}<br>Type d'achat : {ILIST_TYPE}"
+#~ "<br>Commentaire : {ILIST_COMMENT}<br><br>L'administrateur "
+#~ "{ILIST_WP_SITE_NAME} {ILIST_WP_SITE_DESC}"
+
+#~ msgid "License plugin"
+#~ msgstr "Plugin licence"
+
+#~ msgid "ILIST License"
+#~ msgstr "Licence ILIST"
+
+#~ msgid ""
+#~ "Entering your license key is mandatory to get the product updates and support"
+#~ msgstr ""
+#~ "La saisie de votre clé de licence est obligatoire pour obtenir les mises à "
+#~ "jour et le support du produit"
+
+#~ msgid "Unable to contact server"
+#~ msgstr "Impossible de contacter le serveur"
+
+#~ msgid "Your license is active"
+#~ msgstr "Votre licence est activée"
+
+#~ msgid "Your license is pending"
+#~ msgstr "Votre licence est en attente"
+
+#~ msgid "Your license is blocked"
+#~ msgstr "Votre licence a été bloqué"
+
+#~ msgid "Your license is expired"
+#~ msgstr "Votre licence est expirée"
+
+#~ msgid "License Created Date"
+#~ msgstr "Date de création de la licence"
+
+#~ msgid "License Date of Expiry"
+#~ msgstr "Date d'expiration de la licence"
+
+#~ msgid "License Email"
+#~ msgstr "Licence Email"
+
+#~ msgid "License Number for Domain"
+#~ msgstr "Licence numéro pour ce domaine"
+
+#~ msgid "License Registered Domain"
+#~ msgstr "Licence Domaine enregistré"
+
+#~ msgid "License Item Reference"
+#~ msgstr "Licence Référence"
+
+#~ msgid "An error occurred while checking your license.<br>Contact support"
+#~ msgstr ""
+#~ "Une erreur est survenue lors de la vérification de votre licence."
+#~ "<br>Contactez le support"
+
+#~ msgid "The products"
+#~ msgstr "Les produits"
+
+#~ msgid "Edit product"
+#~ msgstr "Modifier le produit"
+
+#~ msgid "All products"
+#~ msgstr "Tous les produits"
+
+#~ msgid "Product(s) successfully deleted : %d"
+#~ msgstr "Produit(s) supprimé(s) avec succès : %d"
+
+#~ msgid "Product added successfully to the list"
+#~ msgstr "Produit ajouté à la liste avec succès"
+
+#~ msgid "Reload this page"
+#~ msgstr "Recharger la page"
+
+#~ msgid "Error adding product"
+#~ msgstr "Erreur lors de l'ajout du produit"
+
+#~ msgid "Products from the list :: "
+#~ msgstr "Produits de la liste :: "
+
+#~ msgid ""
+#~ "You can add / edit / delete the status of your products from <a href=\"%s"
+#~ "\">status management</a>"
+#~ msgstr ""
+#~ "Vous pouvez ajouter / modifier / supprimer les statuts de vos produits "
+#~ "depuis la <a href=\"%s\">gestion des statuts</a>"
+
+#~ msgid "All types"
+#~ msgstr "Tous les statuts"
+
+#~ msgid "Type(s) successfully deleted : %d"
+#~ msgstr "Statut(s) supprimé(s) avec succès : %d"
+
+#~ msgid "Search in types"
+#~ msgstr "Rechercher dans les statuts"
+
+#~ msgid ""
+#~ "<strong> Note: </ strong> <br> Status with <strong>ID 1 and 2</strong> can "
+#~ "not be deleted. They are part of the internal process of the ILIST plugin."
+#~ "<br>You can add as many as you want for the good operation of your lists."
+#~ msgstr ""
+#~ "<strong>Note :</strong><br>Les statuts possédant l'<strong>ID 1 et 2</"
+#~ "strong> ne peuvent pas être supprimés. Ils font partie du processus interne "
+#~ "du plugin ILIST.<br>Vous pouvez en ajouter autant que vous le souhaitez pour "
+#~ "le bon fonctionnement de vos listes."
+
+#~ msgid "All Lists"
+#~ msgstr "Toutes les listes"
+
+#~ msgid "Add new list"
+#~ msgstr "Ajouter une liste"
+
+#~ msgid "List(s) successfully deleted : %d"
+#~ msgstr "Liste(s) spprimée(s) avec succès : %d"
+
+#~ msgid "Search in lists"
+#~ msgstr "Rechercher dans les listes"
+
+#~ msgid "Ilists Pages Url (WooCommerce Product page)"
+#~ msgstr "Url des pages Ilist (WooCommerce Product page)"
+
+#~ msgid "Visible in the Wordpress dashboard"
+#~ msgstr "Visible dans le tableau de bord de Wordpress"
+
+#~ msgid "Go to dashboard"
+#~ msgstr "Allez au tableau de bord"
+
+#~ msgid "WP Dashboard Widget"
+#~ msgstr "Widget du tableau de bord Wordpress"
+
+#~ msgid "Yes - Default: enabled"
+#~ msgstr "Oui - Défaut : activé"
+
+#~ msgid "Url of the main page list"
+#~ msgstr "Url de la page principale"
+
+#~ msgid "Url of the search page list"
+#~ msgstr "Url de la page de recherche"
+
+#~ msgid "Front lightbox color"
+#~ msgstr "Couleur de la lightbox (FRONT)"
+
+#~ msgid "Default lightbox color"
+#~ msgstr "Couleur par défaut"
+
+#~ msgid "Lighbox preview when you click on items in a list"
+#~ msgstr ""
+#~ "Prévisualition de la lightbox quand vous cliquez sur un article dans une "
+#~ "liste"
+
+#~ msgid "Select your lightbox color"
+#~ msgstr "Sélectionner la couleur de votre lightbox"
+
+#~ msgid "ILIST Log"
+#~ msgstr "Log ILIST"
+
+#~ msgid "Log Activation"
+#~ msgstr "Activation de la log"
+
+#~ msgid "Yes - Default: disabled"
+#~ msgstr "Oui - Défaut : désactivée"
+
+#~ msgid "Log File"
+#~ msgstr "Fichier de log"
+
+#~ msgid "No log file"
+#~ msgstr "Aucun fichier de log"
+
+#~ msgid "Logs disabled"
+#~ msgstr "Logs désactivées"
+
+#~ msgid "No lists created"
+#~ msgstr "Aucune liste créée"
+
+#~ msgid "Last created lists"
+#~ msgstr "Dernières listes créées"
+
+#~ msgid "List Name"
+#~ msgstr "Nom de la liste"
+
+#~ msgid "Ilist summary"
+#~ msgstr "Récap Ilist"
+
+#~ msgid "Search Choice possible"
+#~ msgstr "Choix possibles de la recherche"
+
+#~ msgid ""
+#~ "Search by email<br><span class=\"ilist-style-italic ilist-style-description"
+#~ "\">Strict search</span>"
+#~ msgstr ""
+#~ "Recherche par email<br><span class=\"ilist-style-italic ilist-style-"
+#~ "description\">Recherche stricte</span>"
+
+#~ msgid ""
+#~ "Search by list name<br><span class=\"ilist-style-italic ilist-style-"
+#~ "description\">Permissive search</span>"
+#~ msgstr ""
+#~ "Recherche par nom de liste<br><span class=\"ilist-style-italic ilist-style-"
+#~ "description\">Recherche permissive</span>"
+
+#~ msgid "No - Default: disabled"
+#~ msgstr "Non : Défaut : désactivé"
+
+#~ msgid ""
+#~ "Search by firstname<br><span class=\"ilist-style-italic ilist-style-"
+#~ "description\">Permissive search</span>"
+#~ msgstr ""
+#~ "Recherche par prénom<br><span class=\"ilist-style-italic ilist-style-"
+#~ "description\">Recherche permissive</span>"
+
+#~ msgid ""
+#~ "Search by lastname<br><span class=\"ilist-style-italic ilist-style-"
+#~ "description\">Permissive search</span>"
+#~ msgstr ""
+#~ "Recherche par nom<br><span class=\"ilist-style-italic ilist-style-description"
+#~ "\">Recherche permissive</span>"
+
+#~ msgid "Adding products (Live search)"
+#~ msgstr "Ajouter des produits (Live search)"
+
+#~ msgid "Live search after entering 3 characters"
+#~ msgstr "Recherche directe avec suggestion après saisie de 3 caractères"
+
+#~ msgid "Maximum visible results (Live search)"
+#~ msgstr "Résultats maximum visible (Live search)"
+
+#~ msgid "Truncate description"
+#~ msgstr "Tronquer la description"
+
+#~ msgid "The product has been successfully removed from your list"
+#~ msgstr "Le produit a été supprimé de la liste avec succès"
+
+#~ msgid ""
+#~ "An error occurred while deleting the product.<br>Retry or contact an "
+#~ "administrator."
+#~ msgstr ""
+#~ "Une erreur est survenue lors de la suppression du produit.<br>Réessayez ou "
+#~ "contactez un administrateur."
+
+#~ msgid "This list does not exist or is disabled"
+#~ msgstr "Cette liste n'existe pas ou a été désactivé"
+
+#~ msgid "The product was not added"
+#~ msgstr "Le produit n'a pas été ajouté"
+
+#~ msgid "The product has been added to your list successfully"
+#~ msgstr "Le produit a été ajouté à votre liste avec succès"
+
+#~ msgid "Name of the list is required"
+#~ msgstr "Le nom de la liste est obligatoire"
+
+#~ msgid "The email does not have a correct format"
+#~ msgstr "L'email ne possède pas un format correct"
+
+#~ msgid "Your new list has been successfully created<br><a href=\""
+#~ msgstr "Votre nouvelle liste a été créé avec succès<br><a href=\""
+
+#~ msgid "Your new list was not created<br>Retry or contact an administrator."
+#~ msgstr ""
+#~ "Votre nouvelle liste n'a pas été créé<br>Réessayez ou contactez un "
+#~ "administrateur."
+
+#~ msgid "Your list was not updated<br>Retry or contact an administrator."
+#~ msgstr ""
+#~ "Votre liste n'a pas été modifié<br>Réessayez ou contactez un administrateur."
+
+#~ msgid "Your list was updated successfully<br><a href=\""
+#~ msgstr "Votre liste a été modifié avec succès<br><a href=\""
+
+#~ msgid "You can not modify this list because you are not the creator"
+#~ msgstr ""
+#~ "Vous ne pouvez pas modifier cette liste car vous n'en n'êtes pas le créateur"
+
+#~ msgid "See this product"
+#~ msgstr "Voir le produit"
+
+#~ msgid "Add to my list"
+#~ msgstr "Ajouter à ma liste"
+
+#~ msgid "No product found"
+#~ msgstr "Aucun produit trouvé"
+
+#~ msgid "Leave a comment if you order for a list"
+#~ msgstr "Laissez un commentaire si vous avez commandé depuis une liste"
+
+#~ msgid "Your message"
+#~ msgstr "Votre message"
+
+#~ msgid "Create a list"
+#~ msgstr "Créer une liste"
+
+#~ msgid "Add to my list "
+#~ msgstr "Ajouter à ma liste "
+
+#~ msgid "You must be logged in to view your lists and create new ones"
+#~ msgstr "Vous devez être connecté pour voir vos listes et en créez de nouvelles"
+
+#~ msgid "Name of your list"
+#~ msgstr "Nom de votre liste"
+
+#~ msgid "Enter a name which you wish to associate with this list."
+#~ msgstr "Entrez un nom que vous souhaitez associer à cette liste."
+
+#~ msgid "Email associated with the list"
+#~ msgstr "Email associé à votre liste"
+
+#~ msgid "Users will be able to find your list by searching with this email"
+#~ msgstr ""
+#~ "Les utilisateurs pourront trouver votre liste en recherchant avec cet email"
+
+#~ msgid "Connexion"
+#~ msgstr "Connexion"
+
+#~ msgid "Log in"
+#~ msgstr "Identification"
+
+#~ msgid "Create account"
+#~ msgstr "Créer un compte"
+
+#~ msgid "Create a new list"
+#~ msgstr "Créer une liste"
+
+#~ msgid "Your lists"
+#~ msgstr "Vos listes"
+
+#~ msgid "Created on"
+#~ msgstr "Créée le"
+
+#~ msgid "Edit"
+#~ msgstr "Modifier"
+
+#~ msgid "Add products to the list"
+#~ msgstr "Ajouter des produits à la liste"
+
+#~ msgid "You have not created lists yet"
+#~ msgstr "Vous n'avez pas encore créé de listes"
+
+#~ msgid "Add products to your list"
+#~ msgstr "Ajouter des produits à votre liste"
+
+#~ msgid "Enter product name of your shop (3 characters min.)"
+#~ msgstr "Entrez le nom du produit de votre boutique (3 caractères min.)"
+
+#~ msgid "The WooCommerce Plugin is not installed"
+#~ msgstr "Le plugin WooCommerce n'est pas installé"
+
+#~ msgid "Price"
+#~ msgstr "Prix"
+
+#~ msgid "Action"
+#~ msgstr "Action"
+
+#~ msgid "Not still bought"
+#~ msgstr "Pas encore acheté"
+
+#~ msgid "Select options"
+#~ msgstr "Sélectionnez des options"
+
+#~ msgid "Read More"
+#~ msgstr "Lire plus"
+
+#~ msgid "Add to cart"
+#~ msgstr "Ajouter au panier"
+
+#~ msgid "Offered by "
+#~ msgstr "Offert par "
+
+#~ msgid "Offered product"
+#~ msgstr "Produit offert"
+
+#~ msgid "No available product for this list"
+#~ msgstr "Aucun produit disponible pour cette liste"
+
+#~ msgid "Find a list"
+#~ msgstr "Trouver une liste"
+
+#~ msgid "Enter name, email"
+#~ msgstr "Entrez un nom, un email"
+
+#~ msgid "Name of list"
+#~ msgstr "Nom de la liste"
+
+#~ msgid "Created"
+#~ msgstr "Créée"
+
+#~ msgid "No list found"
+#~ msgstr "Aucune liste trouvée"
+
+#~ msgid ""
+#~ "ILIST: You must complete your settings Automatic emails before using the "
+#~ "plugin (Save your <a href=\"%s\">email settings</a>)"
+#~ msgstr ""
+#~ "ILIST : Vous devez finaliser vos paramètres Emails automatiques (Enregistrer "
+#~ "vos <a href=\"%s\">paramètres de messagerie</a>)"
+
+#~ msgid ""
+#~ "Do not indicate anything if no comment.<br>It will not be saved if it was "
+#~ "not dropped during an Internet order."
+#~ msgstr ""
+#~ "N'indiquez rien si pas de commentaire.<br>Ne sera pas sauvegardé si celui-ci "
+#~ "n'a pas été déposé lors d'une commande Internet"
+
+#~ msgid "Do not indicate anything if no comment"
+#~ msgstr "N'indiquez rien si pas de commentaire"
+
+#~ msgid "Recommended minimum version 3.0"
+#~ msgstr "Version minimum conseillée 3.0"
+
+#~ msgid "Purchase shop (Withdrawal in shop)"
+#~ msgstr "Achat boutique (retrait en boutique)"
+
+#~ msgid "Purchase shop (Taken by the participant)"
+#~ msgstr "Achat boutique (emporté par le participant)"
+
+#~ msgid "<span class=\"buy_shop\">Purchase shop (Withdrawal in shop)</span>"
+#~ msgstr "<span class=\"buy_shop\">Achat boutique (retrait en boutique)</span>"
+
+#~ msgid ""
+#~ "<span class=\"buy_shop\">Purchase shop (Taken by the participant)</span>"
+#~ msgstr ""
+#~ "<span class=\"buy_shop\">Achat boutique (emporté par le participant)</span>"
+
+#~ msgid "<span class=\"buy_internet\">Internet purchase</span>"
+#~ msgstr "<span class=\"buy_internet\">Achat Internet</span>"
+
+#~ msgid "On sale"
+#~ msgstr "En vente"
+
+#~ msgid ""
+#~ "You can add / modify / delete the status of your products from <a href=\"%s"
+#~ "\">status management</a>"
+#~ msgstr ""
+#~ "Vous pouvez ajouter/modifier/supprimer les statuts de vos produits depuis la "
+#~ "<a href=\"%s\">gestion des statuts</a>"
+
+#~ msgid "identifiant"
+#~ msgstr "identifiant"
+
+#~ msgid "Slug name"
+#~ msgstr "Identifiant"
+
+#~ msgid ""
+#~ "The NAME is the URL-friendly version of the Status Title. It is usually all "
+#~ "lowercase and contains only letters, numbers, and hyphens. You can leave it "
+#~ "blank at creation, it will be created automatically."
+#~ msgstr ""
+#~ "L'identifiant est la version normalisée du titre. Il ne contient "
+#~ "généralement que des lettres minuscules non accentuées, des chiffres et des "
+#~ "traits d'union. Vous pouvez le laisser vide lors de la création, il sera "
+#~ "créé automatiquement."
+
+#~ msgid "Type name is required"
+#~ msgstr "L'identifiant du type est obligatoire"
+
+#~ msgid "id"
+#~ msgstr "id"
+
+#~ msgid ""
+#~ "The NAME is the URL-friendly version of the name. It is usually all "
+#~ "lowercase and contains only letters, numbers, and hyphens. You can leave it "
+#~ "blank at creation, it will be created automatically."
+#~ msgstr ""
+#~ "L'identifiant est la version normalisée du nom. Il ne contient généralement "
+#~ "que des lettres minuscules non accentuées, des chiffres et des traits "
+#~ "d'union. Vous pouvez le laisser vide lors de la création, il sera créé "
+#~ "automatiquement."
+
+#~ msgid "Title status"
+#~ msgstr "Titre"
+
+#~ msgid "Status name of your product"
+#~ msgstr "Nom du statut/état de votre produit"
+
+#~ msgid "An error occurred while checking your license. Contact support"
+#~ msgstr ""
+#~ "Une erreur s'est produite lors de la vérification de votre licence.Contacter "
+#~ "le support"
+
+#~ msgid "Please enter your license key to receive updates"
+#~ msgstr "Entrez votre numéro de licence pour recevoir les mises à jours"
+
+#~ msgid "Entering your license key is mandatory to get the product updates."
+#~ msgstr ""
+#~ "La saisie de votre numéro de licence est obligatoire pour obtenir les mises "
+#~ "à jour du plugin."
+
+#~ msgid ""
+#~ "A product (or more) has just been purchased on one of your lists:"
+#~ "<br><br>List Name: {ILIST_NAME}<br>Product(s) Name: {ILIST_PRODUCT}<br>By: "
+#~ "{ILIST_FRIEND}<br>Date: {ILIST_DATE}<br>Purchase Type: {ILIST_TYPE}"
+#~ "<br>Comment: {ILIST_COMMENT}<br><br>{ILIST_WP_SITE_NAME} {ILIST_WP_SITE_DESC}"
+#~ "<br>See you soon"
+#~ msgstr ""
+#~ "Bonjour,<br><br>Un produit (ou plus) vient d'être acheté sur une de vos "
+#~ "listes :<br><br>Nom de la liste : {ILIST_NAME}<br>Nom des produits : "
+#~ "{ILIST_PRODUCT}<br>Par : {ILIST_FRIEND}<br>Le : {ILIST_DATE}<br>Type "
+#~ "d'achat : {ILIST_TYPE}<br>Commentaire : {ILIST_COMMENT}"
+#~ "<br><br>{ILIST_WP_SITE_NAME} {ILIST_WP_SITE_DESC}<br>A bientôt"
+
+#~ msgid "Live search after 3 characters"
+#~ msgstr "Recherche directe après saisie de 3 caractères"
+
+#~ msgid "Live search"
+#~ msgstr "Recherche en direct"
+
+#~ msgid ""
+#~ "A product has just been purchased on one of your lists:<br><br>List Name: "
+#~ "{ILIST_NAME}<br>Product Name: {ILIST_PRODUCT}<br>By: {ILIST_FRIEND}<br>Date: "
+#~ "{ILIST_DATE}<br>Purchase Type: {ILIST_TYPE}<br>Comment: {ILIST_COMMENT}"
+#~ "<br><br>{ILIST_WP_SITE_NAME} {ILIST_WP_SITE_DESC}<br>See you soon"
+#~ msgstr ""
+#~ "Bonjour,<br><br>Un produit vient d'être acheté sur une de vos listes :"
+#~ "<br><br>Nom de la liste : {ILIST_NAME}<br>Nom du produit : {ILIST_PRODUCT}"
+#~ "<br>Par : {ILIST_FRIEND}<br>Le : {ILIST_DATE}<br>Type d'achat : {ILIST_TYPE}"
+#~ "<br>Commentaire : {ILIST_COMMENT}<br><br>{ILIST_WP_SITE_NAME} "
+#~ "{ILIST_WP_SITE_DESC}<br>A bientôt"
+
+#~ msgid ""
+#~ "A product has just been purchased on one of your lists:<br>\n"
+#~ "<br>\n"
+#~ "List Name: {ILIST_NAME}<br>\n"
+#~ "Product Name: {ILIST_PRODUCT}<br>\n"
+#~ "By: {ILIST_FRIEND}<br>\n"
+#~ "Date: {ILIST_DATE}<br>\n"
+#~ "Purchase Type: {ILIST_TYPE}<br>\n"
+#~ "Comment: {ILIST_COMMENT}<br>\n"
+#~ "<br>\n"
+#~ "{ILIST_WP_SITE_NAME} {ILIST_WP_SITE_DESC}<br>\n"
+#~ "See you soon"
+#~ msgstr ""
+#~ "Bonjour,\n"
+#~ "\n"
+#~ "Un produit vient d'être acheté sur une de vos listes de naissance :\n"
+#~ "\n"
+#~ "Nom de la liste : {BIRTHLIST_NAME}\n"
+#~ "Nom du produit : {BIRTHLIST_PRODUCT}\n"
+#~ "Par : {BIRTHLIST_FRIEND}\n"
+#~ "Le : {BIRTHLIST_DATE}\n"
+#~ "Type d'achat : {BIRTHLIST_TYPE}\n"
+#~ "Commentaire : {BIRTHLIST_COMMENT}\n"
+#~ "\n"
+#~ "Toute l'équipe de CHOO Design\n"
+#~ "A bientôt"
+
+#~ msgid ""
+#~ "ILIST: You must complete your settings Automatic emails before using the "
+#~ "plugin (Save your email settings)"
+#~ msgstr ""
+#~ "ILIST : Vous devez finaliser vos paramètres Messagerie automatique avant "
+#~ "d'utiliser le plugin (Enregistrer vos paramètres de messagerie)"
+
+#~ msgid ""
+#~ "ILIST: You must complete your settings Automatic emails (Save your email "
+#~ "settings)"
+#~ msgstr ""
+#~ "ILIST : Vous devez finaliser vos paramètres Messagerie automatique "
+#~ "(Enregistrer vos paramètres de messagerie)"
+
+#~ msgid "Lighbox when you click on items in a list"
+#~ msgstr "Lightbox quand vous cliquez sur un article dans une liste"
+
+#~ msgid "List :: %s"
+#~ msgstr "Liste :: %s"
+
+#~ msgid "Url of the page list"
+#~ msgstr "Url de la page"
+
+#~ msgid "Url of the page search list"
+#~ msgstr "Url de la page de recherche"
+
+#~ msgid "Page Url 'Lists' (WooCommerce Product page)"
+#~ msgstr "Url de la page 'Listes' (page produit WooCommerce)"
+
+#~ msgid "Ilist page link"
+#~ msgstr "Lien de la page Ilist"
+
+#~ msgid "Ilist search page link"
+#~ msgstr "Lien de la page de recherche Ilist"
+
+#~ msgid "Lists"
+#~ msgstr "Listes"
+
+#~ msgid "Shortcodes"
+#~ msgstr "Shortcodes"
+
+#~ msgid "General Shortcode"
+#~ msgstr "Shortcode général"
+
+#~ msgid ""
+#~ "To put in the textarea of your page (url customized to your wishes for the "
+#~ "SEO)"
+#~ msgstr ""
+#~ "A mettre dans votre zone de texte de votre page (URL personnalisée à vos "
+#~ "souhaits pour le référencement)"
+
+#~ msgid "Search Shortcode"
+#~ msgstr "Shortcode recherche"
+
+#~ msgid "Welcome to the \""
+#~ msgstr "Bienvenue sur le plugin \""
+
+#~ msgid "Page Url 'Lists' (Product page WooCommerce)"
+#~ msgstr "Url de la page 'Listes' (page produit WooCommerce)"
+
+#~ msgid "Dashboard Widget"
+#~ msgstr "Widget du tableau de bord Wordpress"
+
+#~ msgid "The product &laquo; "
+#~ msgstr "Le produit &laquo; "
+
+#~ msgid "Welcome to the \"Lists\" plugin"
+#~ msgstr "Bienvenue sur le plugin \"ILists\""
+
+#~ msgid ""
+#~ "Search by email<br><span class=\"naissance-style-italic naissance-style-"
+#~ "description\">Strict search</span>"
+#~ msgstr ""
+#~ "Recherche par email<br><span class=\"naissance-style-italic naissance-style-"
+#~ "description\">Recherche stricte</span>"
+
+#~ msgid ""
+#~ "Search by list name<br><span class=\"naissance-style-italic naissance-style-"
+#~ "description\">Permissive search</span>"
+#~ msgstr ""
+#~ "Recherche par nom de liste<br><span class=\"naissance-style-italic naissance-"
+#~ "style-description\">Recherche permissive</span>"
+
+#~ msgid ""
+#~ "Search by firstname<br><span class=\"naissance-style-italic naissance-style-"
+#~ "description\">Permissive search</span>"
+#~ msgstr ""
+#~ "Recherche par prénom<br><span class=\"naissance-style-italic naissance-style-"
+#~ "description\">Recherche permissive</span>"
+
+#~ msgid ""
+#~ "Search by lastname<br><span class=\"naissance-style-italic naissance-style-"
+#~ "description\">Permissive search</span>"
+#~ msgstr ""
+#~ "Recherche par nom<br><span class=\"naissance-style-italic naissance-style-"
+#~ "description\">Recherche permissive</span>"
+
+#~ msgid "Emails"
+#~ msgstr "Emails"
+
+#~ msgid ""
+#~ "To put in the textarea of ââyour page (url customized to your wishes for the "
+#~ "SEO)"
+#~ msgstr ""
+#~ "A mettre dans la zone de texte de votre page (URL personnalisée à vos "
+#~ "souhaits pour le référencement)"
+
+#~ msgid "Supprimer"
+#~ msgstr "Supprimer"

@@ -1,0 +1,5 @@
+.idea/
+.DS_Store
+lib/.DS_Store
+lib/plugin-update-checker/.DS_Store
+lib/titan-framework/.DS_Store

@@ -1,0 +1,52 @@
+.ob:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 540px) {
+    .banner-sd {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 100001;
+        padding: 20px 0;
+    }
+    .banner-sd p {
+        margin: 0 !important;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 1280px) {
+    .banner-md {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 100001;
+        padding: 20px 0;
+    }
+    .banner-md p {
+        margin: 0 !important;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .banner-ld {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 100001;
+        padding: 20px 0;
+    }
+    .banner-ld p {
+        margin: 0 !important;
+        font-weight: bold;
+    }
+}
