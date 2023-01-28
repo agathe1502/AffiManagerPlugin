@@ -58,14 +58,12 @@ class AmUpdateBlocksTable
         $sql = "SELECT * FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug'";
         $blocksFromDb = $wpdb->get_results($sql);
 
-        $query = "";
-
         foreach ($blocksFromDb as $blockFromDb) {
             $id = $blockFromDb->id;
             if (isset($blocksByIdFromAffiManager[$id])) {
                 // Id is present in the list sended by Affimanager
                 $blockFromAm = $blocksByIdFromAffiManager[$id];
-                if ($blockFromAm["status"] == "DEPLOYED") {
+                if ($blockFromAm["status"] == "WAITING_DEPLOYMENT") {
                     // Save all the data
                     $sql = "UPDATE {$wpdb->prefix}am_blocks SET position = %s, enable = %s, content = %s WHERE id = %s;";
                     $sql = $wpdb->prepare($sql, $blockFromAm["position"], $blockFromAm["enable"], $blockFromAm["content"], $id);
@@ -86,9 +84,12 @@ class AmUpdateBlocksTable
 
         // In the array, there are only ids to add
         foreach ($blocksByIdFromAffiManager as $id => $blockToAdd) {
-            $sql = "INSERT INTO {$wpdb->prefix}am_blocks (id, position, slug, enable, content) VALUES (%s, %s, %s, %s, %s);";
-            $sql = $wpdb->prepare($sql, $id, $blockToAdd["position"], $blockToAdd["slug"], $blockToAdd["enable"], $blockToAdd["content"]);
-            $wpdb->query($sql);
+            // Insert only if it need to be deployed
+            if ($blockToAdd["status"] == "WAITING_DEPLOYMENT") {
+                $sql = "INSERT INTO {$wpdb->prefix}am_blocks (id, position, slug, enable, content) VALUES (%s, %s, %s, %s, %s);";
+                $sql = $wpdb->prepare($sql, $id, $blockToAdd["position"], $blockToAdd["slug"], $blockToAdd["enable"], $blockToAdd["content"]);
+                $wpdb->query($sql);
+            }
         }
 
         // Then, recreate the post content with the data saved in DB
@@ -99,6 +100,15 @@ class AmUpdateBlocksTable
             'numberposts' => 1
         );
         $post = get_posts($args)[0];
+
+        wp_send_json(array(
+            'status' => true,
+            'code' => 'success',
+            'message' => __('Success', AM_ID_LANGUAGES),
+            'wordpress_plugin_version' => am_get_version(),
+            'post' => $post
+        ));
+        return;
 
         $sql = "SELECT content FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug' ORDER BY position";
         $contents = $wpdb->get_results($sql);
