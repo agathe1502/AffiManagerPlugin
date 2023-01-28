@@ -40,9 +40,16 @@ class AmUpdateBlocksTable
 
         // Check if the data is great
         foreach ($data as $block) {
-            if (isset($block['id']) and isset($block['slug']) and isset($block['content']) and isset($block['position']) and isset($block['enable']) and isset($block['status'])) {
+            if (isset($block['id']) and
+                isset($block['title']) and
+                isset($block['slug']) and
+                isset($block['content']) and
+                isset($block['position']) and
+                isset($block['enable']) and
+                isset($block['status'])) {
                 $blocksByIdFromAffiManager[$block['id']] = $block;
                 $slug = $block['slug'];
+                $title = $block['title'];
             } else {
                 wp_send_json(array(
                     'status' => false,
@@ -101,29 +108,27 @@ class AmUpdateBlocksTable
         );
         $post = get_posts($args)[0];
 
-        if ($post == null) {
-            $post = [
-                'post_name' => $slug,
-                'post_type'   => 'post',
-                'post_status' => 'publish',
-                'post_title' => 'TEST'
-            ];
-        }
-
         $sql = "SELECT content FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug' ORDER BY position";
         $contents = $wpdb->get_results($sql);
-
-
-        wp_send_json(array(
-            'content' => $contents,
-        ));
-        return;
 
         $content = '';
         foreach ($contents as $post_content) {
             $content .= $post_content->content . '<br>';
         }
-        $post->post_content = $content;
+
+        if ($post == null) {
+            $post = [
+                'post_name' => $slug,
+                'post_type'   => 'post',
+                'post_status' => 'publish',
+                'post_title' => $title,
+                'post_content' => $content
+            ];
+        }
+        else {
+            $post->post_content = $content;
+            $post->post_title = $title;
+        }
 
         wp_insert_post($post);
 
