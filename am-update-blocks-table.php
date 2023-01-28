@@ -101,17 +101,23 @@ class AmUpdateBlocksTable
         );
         $post = get_posts($args)[0];
 
-        wp_send_json(array(
-            'status' => true,
-            'code' => 'success',
-            'message' => __('Success', AM_ID_LANGUAGES),
-            'wordpress_plugin_version' => am_get_version(),
-            'post' => $post
-        ));
-        return;
+        if ($post == null) {
+            $post = [
+                'post_name' => $slug,
+                'post_type'   => 'post',
+                'post_status' => 'publish',
+                'post_title' => 'TEST'
+            ];
+        }
 
         $sql = "SELECT content FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug' ORDER BY position";
         $contents = $wpdb->get_results($sql);
+
+
+        wp_send_json(array(
+            'content' => $contents,
+        ));
+        return;
 
         $content = '';
         foreach ($contents as $post_content) {
@@ -119,8 +125,7 @@ class AmUpdateBlocksTable
         }
         $post->post_content = $content;
 
-        wp_update_post($post);
-
+        wp_insert_post($post);
 
         wp_send_json(array(
             'status' => true,
