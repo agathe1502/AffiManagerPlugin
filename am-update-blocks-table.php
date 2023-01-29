@@ -65,6 +65,7 @@ class AmUpdateBlocksTable
         $sql = "SELECT * FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug'";
         $blocksFromDb = $wpdb->get_results($sql);
 
+        $touteLesSql = [];
         foreach ($blocksFromDb as $blockFromDb) {
             $id = $blockFromDb->id;
             if (isset($blocksByIdFromAffiManager[$id])) {
@@ -87,8 +88,14 @@ class AmUpdateBlocksTable
                 $sql = $wpdb->prepare($sql, $id);
             }
             $wpdb->query($sql);
+            array_push($touteLesSql, $sql);
         }
 
+        wp_send_json(array(
+            'toutelesSql' => $touteLesSql
+        ));
+
+        return;
         // In the array, there are only ids to add
         foreach ($blocksByIdFromAffiManager as $id => $blockToAdd) {
             // Insert only if it need to be deployed
