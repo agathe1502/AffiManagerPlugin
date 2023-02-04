@@ -116,6 +116,24 @@ class AmUpdateBlocksTable
             $content .= $post_content->content . '<br>';
         }
 
+        $html = str_get_html($content);
+        foreach($html->find('span[class=ob]') as $span) {
+            $prop = 'data-ob';
+            $href = $span->$prop;
+            $span->$prop = base64_encode($href);
+        }
+        foreach($html->find('img') as $span) {
+            $prop = 'src';
+            $src = $span->$prop;
+            $span->$prop = 'https://chine.in/images/2019/7432b409fc78a62b6661f4299ee63f17.jpg';
+        }
+
+
+        //$image_url = 'https://www.cdiscount.com/pdt2/0/3/4/1/700x700/fdi7550040473034/rw/fdit-balayeuse-intelligente-robot-aspirateur-balai.jpg';
+        //$new_image_url = $this->save_media($image_url);
+
+        $content = (string)$html;
+
         if ($post == null) {
             $post = [
                 'post_name' => $slug,
@@ -132,8 +150,7 @@ class AmUpdateBlocksTable
 
         wp_insert_post($post);
 
-        $this->save_media();
-        return;
+        //return;
 
         wp_send_json(array(
             'status' => true,
@@ -143,8 +160,7 @@ class AmUpdateBlocksTable
         ));
     }
 
-    private function save_media() {
-        $image_url = 'https://www.cdiscount.com/pdt2/0/3/4/1/700x700/fdi7550040473034/rw/fdit-balayeuse-intelligente-robot-aspirateur-balai.jpg';
+    private function save_media($image_url) {
 
         $upload_dir = wp_upload_dir();
 
@@ -175,12 +191,18 @@ class AmUpdateBlocksTable
         $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
         wp_update_attachment_metadata( $attach_id, $attach_data );
 
+        $new_url = wp_get_attachment_url($attach_id);
+        /*
         wp_send_json(array(
             'status' => true,
             'code' => 'success',
-            'file' => $file
+            'file' => $file,
+            'attach_id' => $attach_id,
+            'url' => $new_url
         ));
+        */
 
+        return $new_url;
     }
 
     private function is_bearer_token_valid()
