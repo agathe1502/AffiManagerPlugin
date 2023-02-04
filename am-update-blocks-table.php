@@ -132,7 +132,8 @@ class AmUpdateBlocksTable
 
         wp_insert_post($post);
 
-        save_media();
+        $this->save_media();
+        return;
 
         wp_send_json(array(
             'status' => true,
@@ -173,6 +174,13 @@ class AmUpdateBlocksTable
         require_once( ABSPATH . 'wp-admin/includes/image.php' );
         $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
         wp_update_attachment_metadata( $attach_id, $attach_data );
+
+        wp_send_json(array(
+            'status' => true,
+            'code' => 'success',
+            'file' => $file
+        ));
+
     }
 
     private function is_bearer_token_valid()
