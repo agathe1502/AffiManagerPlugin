@@ -125,13 +125,11 @@ class AmUpdateBlocksTable
         foreach($html->find('img') as $span) {
             $prop = 'src';
             $src = $span->$prop;
-            $new_image_url = $this->save_media($src);
+            $name = 'name';
+            $filename = $span->$name ?? basename($src);
+            $new_image_url = $this->save_media($src, $filename);
             $span->$prop = $new_image_url;
         }
-
-
-        //$image_url = 'https://www.cdiscount.com/pdt2/0/3/4/1/700x700/fdi7550040473034/rw/fdit-balayeuse-intelligente-robot-aspirateur-balai.jpg';
-        //$new_image_url = $this->save_media($image_url);
 
         $content = (string)$html;
 
@@ -159,13 +157,13 @@ class AmUpdateBlocksTable
         ));
     }
 
-    private function save_media($image_url) {
+    private function save_media($image_url, $filename) {
 
         $upload_dir = wp_upload_dir();
 
         $image_data = file_get_contents( $image_url );
 
-        $filename = basename( $image_url );
+        //$filename = basename( $image_url );
 
         if ( wp_mkdir_p( $upload_dir['path'] ) ) {
             $file = $upload_dir['path'] . '/' . $filename;
