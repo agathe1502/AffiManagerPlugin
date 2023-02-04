@@ -125,7 +125,8 @@ class AmUpdateBlocksTable
         foreach($html->find('img') as $span) {
             $prop = 'src';
             $src = $span->$prop;
-            $span->$prop = 'https://chine.in/images/2019/7432b409fc78a62b6661f4299ee63f17.jpg';
+            $new_image_url = $this->save_media($src);
+            $span->$prop = $new_image_url;
         }
 
 
@@ -149,8 +150,6 @@ class AmUpdateBlocksTable
         }
 
         wp_insert_post($post);
-
-        //return;
 
         wp_send_json(array(
             'status' => true,
@@ -191,18 +190,7 @@ class AmUpdateBlocksTable
         $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
         wp_update_attachment_metadata( $attach_id, $attach_data );
 
-        $new_url = wp_get_attachment_url($attach_id);
-        /*
-        wp_send_json(array(
-            'status' => true,
-            'code' => 'success',
-            'file' => $file,
-            'attach_id' => $attach_id,
-            'url' => $new_url
-        ));
-        */
-
-        return $new_url;
+        return wp_get_attachment_url($attach_id);
     }
 
     private function is_bearer_token_valid()
