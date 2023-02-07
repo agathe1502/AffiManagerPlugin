@@ -25,6 +25,11 @@ $dashboardTab->createOption(array(
     'type' => 'text',
     'hidden' => true
 ));
+$dashboardTab->createOption(array(
+    'id' => 'am_get_categories',
+    'type' => 'text',
+    'hidden' => true
+));
 // ----------------------------------------
 if (!function_exists("am_admin_notice_error")) {
     function am_admin_notice_error()

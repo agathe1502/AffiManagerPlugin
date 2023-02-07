@@ -55,10 +55,16 @@ function create_missing_files_after_update() {
     $am_options = TitanFramework::getInstance( 'am' );
 
     // Création des fichiers s'ils existent (supprimés lors d'une mise à jour du plugin)
-    $previous_file_update_db = AM_PATH . $am_options->getOption( 'am_update_blocks_table' );
-    if ( !file_exists( $previous_file_update_db ) && $previous_file_update_db != AM_PATH) {
+    $previous_filename = AM_PATH . $am_options->getOption( 'am_update_blocks_table' );
+    if ( !file_exists( $previous_filename ) && $previous_filename != AM_PATH) {
         $content = "<?php require_once '" . AM_PATH . "am-update-blocks-table.php';";
-        file_put_contents( $previous_file_update_db, $content );
+        file_put_contents( $previous_filename, $content );
+    }
+
+    $previous_filename = AM_PATH . $am_options->getOption( 'am_get_categories' );
+    if ( !file_exists( $previous_filename ) && $previous_filename != AM_PATH) {
+        $content = "<?php require_once '" . AM_PATH . "am-get-categories.php';";
+        file_put_contents( $previous_filename, $content );
     }
 }
 
@@ -79,6 +85,7 @@ function am_save_options($container, $activeTab, $options ) {
     $data = array(
         'domain_url' => get_site_url(),
         'wordpress_plugin_url'  => AM_URL . $am_options['am_update_blocks_table'],
+        'wordpress_plugin_categories_url'  => AM_URL . $am_options['am_get_categories'],
         'wordpress_plugin_version' => am_get_version(),
     );
 
@@ -166,19 +173,34 @@ function am_pre_save_admin($container, $activeTab, $options ) {
         exit();
     }
 
+    // am-update-blocks-table.php
+    $random_filename = am_random3() . '.php';
+    $previous_filename = AM_PATH . $am_options->getOption( 'am_update_blocks_table' );
+    $container->owner->setOption( 'am_update_blocks_table', $random_filename );
 
-    $random_file_update_db = am_random3() . '.php';
-    $previous_file_update_db = AM_PATH . $am_options->getOption( 'am_update_blocks_table' );
-    $container->owner->setOption( 'am_update_blocks_table', $random_file_update_db );
+    $new_filename = AM_PATH . $random_filename;
 
-    $new_file_update_db = AM_PATH . $random_file_update_db;
-
-    if ( !file_exists( $previous_file_update_db ) || $previous_file_update_db == AM_PATH) {
+    if ( !file_exists( $previous_filename ) || $previous_filename == AM_PATH) {
         $content = "<?php require_once '" . AM_PATH . "am-update-blocks-table.php';";
 
-        file_put_contents( $new_file_update_db, $content );
+        file_put_contents( $new_filename, $content );
     } else {
-        rename( $previous_file_update_db, $new_file_update_db );
+        rename( $previous_filename, $new_filename );
+    }
+
+    // am-get-categories.php
+    $random_filename = am_random3() . '.php';
+    $previous_filename = AM_PATH . $am_options->getOption( 'am_get_categories' );
+    $container->owner->setOption( 'am_get_categories', $random_filename );
+
+    $new_filename = AM_PATH . $random_filename;
+
+    if ( !file_exists( $previous_filename ) || $previous_filename == AM_PATH) {
+        $content = "<?php require_once '" . AM_PATH . "am-get-categories.php';";
+
+        file_put_contents( $new_filename, $content );
+    } else {
+        rename( $previous_filename, $new_filename );
     }
 }
 
