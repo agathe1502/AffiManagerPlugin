@@ -46,10 +46,12 @@ class AmUpdateBlocksTable
                 isset($block['content']) and
                 isset($block['position']) and
                 isset($block['enable']) and
+                isset($block['categories']) and
                 isset($block['status'])) {
                 $blocksByIdFromAffiManager[$block['id']] = $block;
                 $slug = $block['slug'];
                 $title = $block['title'];
+                $post_categories = $block['categories'];
             } else {
                 wp_send_json(array(
                     'status' => false,
@@ -137,14 +139,16 @@ class AmUpdateBlocksTable
             $post = [
                 'post_name' => $slug,
                 'post_type'   => 'post',
-                'post_status' => 'publish',
+                'post_status' => 'draft',
                 'post_title' => $title,
-                'post_content' => $content
+                'post_content' => $content,
+                'post_category' => $post_categories
             ];
         }
         else {
             $post->post_content = $content;
             $post->post_title = $title;
+            $post->post_category = $post_categories;
         }
 
         wp_insert_post($post);
