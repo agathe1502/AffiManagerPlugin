@@ -1,4 +1,8 @@
 .ob:hover {
     cursor: pointer;
+    color: darkblue;
+}
+
+.ob {
     text-decoration: underline;
 }
