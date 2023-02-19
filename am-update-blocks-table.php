@@ -47,11 +47,13 @@ class AmUpdateBlocksTable
                 isset($block['position']) and
                 isset($block['enable']) and
                 isset($block['categories']) and
+                isset($block['featured_image_url']) and
                 isset($block['status'])) {
                 $blocksByIdFromAffiManager[$block['id']] = $block;
                 $slug = $block['slug'];
                 $title = $block['title'];
                 $post_categories = $block['categories'];
+                $featured_image_url = $block['featured_image_url'];
             } else {
                 wp_send_json(array(
                     'status' => false,
@@ -151,7 +153,10 @@ class AmUpdateBlocksTable
             $post->post_category = $post_categories;
         }
 
-        wp_insert_post($post);
+        $post_id = wp_insert_post($post);
+
+        // Create post feature image
+        $this->save_media($featured_image_url, $filename, $post_id);
 
         wp_send_json(array(
             'status' => true,
@@ -161,13 +166,11 @@ class AmUpdateBlocksTable
         ));
     }
 
-    private function save_media($image_url, $filename) {
+    private function save_media($image_url, $filename, $post_id = null) {
 
         $upload_dir = wp_upload_dir();
 
         $image_data = file_get_contents( $image_url );
-
-        //$filename = basename( $image_url );
 
         if ( wp_mkdir_p( $upload_dir['path'] ) ) {
             $file = $upload_dir['path'] . '/' . $filename;
@@ -187,7 +190,7 @@ class AmUpdateBlocksTable
             'post_status' => 'inherit'
         );
 
-        $attach_id = wp_insert_attachment( $attachment, $file );
+        $attach_id = wp_insert_attachment( $attachment, $file, $post_id);
         require_once( ABSPATH . 'wp-admin/includes/image.php' );
         $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
         wp_update_attachment_metadata( $attach_id, $attach_data );
