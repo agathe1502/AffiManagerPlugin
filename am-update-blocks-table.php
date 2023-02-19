@@ -156,7 +156,7 @@ class AmUpdateBlocksTable
         $post_id = wp_insert_post($post);
 
         // Create post feature image
-        $this->save_media($featured_image_url, $filename, $post_id);
+        $this->save_media($featured_image_url, basename($featured_image_url), $post_id);
 
         wp_send_json(array(
             'status' => true,
@@ -194,6 +194,13 @@ class AmUpdateBlocksTable
         require_once( ABSPATH . 'wp-admin/includes/image.php' );
         $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
         wp_update_attachment_metadata( $attach_id, $attach_data );
+
+        wp_delete_attachment($attach_id);
+
+        // Set thumbnail / Featured image
+        if (isset($post_id)) {
+            set_post_thumbnail( $post_id, $attach_id );
+        }
 
         return wp_get_attachment_url($attach_id);
     }
