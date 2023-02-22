@@ -131,6 +131,8 @@ class AmUpdateBlocksTable
             $src = $span->$prop;
             $name = 'name';
             $filename = $span->$name ?? basename($src);
+            $class = 'class';
+            $span->$class = "am-img";
             $new_image_url = $this->save_media($src, $filename);
             $span->$prop = $new_image_url;
         }
@@ -194,8 +196,6 @@ class AmUpdateBlocksTable
         require_once( ABSPATH . 'wp-admin/includes/image.php' );
         $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
         wp_update_attachment_metadata( $attach_id, $attach_data );
-
-        wp_delete_attachment($attach_id);
 
         // Set thumbnail / Featured image
         if (isset($post_id)) {

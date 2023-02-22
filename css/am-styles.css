@@ -6,3 +6,8 @@
 .ob {
     text-decoration: underline;
 }
+
+img .am-img {
+    max-width: 400px;
+    max-height: 400px;
+}
