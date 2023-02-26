@@ -107,7 +107,6 @@ class AmUpdateBlocksTable
         $args = array(
             'name'        => $slug,
             'post_type'   => 'post',
-            'post_status' => 'publish',
             'numberposts' => 1
         );
         $post = get_posts($args)[0];
@@ -129,8 +128,8 @@ class AmUpdateBlocksTable
         foreach($html->find('img') as $span) {
             $prop = 'src';
             $src = $span->$prop;
-            $name = 'name';
-            $filename = $span->$name ?? basename($src);
+            $alt = 'alt';
+            $filename = $this->get_image_slug($span->$alt) ?? basename($src);
             $class = 'class';
             $span->$class = "am-img";
             $new_image_url = $this->save_media($src, $filename);
@@ -166,6 +165,17 @@ class AmUpdateBlocksTable
             'message' => __('Success', AM_ID_LANGUAGES),
             'wordpress_plugin_version' => am_get_version(),
         ));
+    }
+
+    private function get_image_slug($image_alt) {
+        $slug = str_replace(' ', '-', $image_alt);
+        $unwanted_array = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+            'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
+            'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
+            'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o',
+            'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
+        $slug = strtr($slug, $unwanted_array );
+        return $slug;
     }
 
     private function save_media($image_url, $filename, $post_id = null) {
