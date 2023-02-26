@@ -107,12 +107,26 @@ class AmUpdateBlocksTable
         $args = array(
             'name'        => $slug,
             'post_type'   => 'post',
+            'post_status' => ['draft', 'published'],
             'numberposts' => 1
         );
         $post = get_posts($args)[0];
 
         $sql = "SELECT content FROM {$wpdb->prefix}am_blocks WHERE slug = '$slug' ORDER BY position";
         $contents = $wpdb->get_results($sql);
+
+
+        // Create post without content
+        if ($post == null) {
+            $post = [
+                'post_name' => $slug,
+                'post_type'   => 'post',
+                'post_status' => 'draft',
+                'post_title' => $title,
+                'post_category' => $post_categories
+            ];
+        }
+        $post_id = wp_insert_post($post);
 
         $content = '';
         foreach ($contents as $post_content) {
@@ -125,6 +139,7 @@ class AmUpdateBlocksTable
             $href = $span->$prop;
             $span->$prop = base64_encode($href);
         }
+        $existing_media = get_attached_media('image', $post_id);
         foreach($html->find('img') as $span) {
             $prop = 'src';
             $src = $span->$prop;
@@ -132,33 +147,21 @@ class AmUpdateBlocksTable
             $filename = $this->get_image_slug($span->$alt) ?? basename($src);
             $class = 'class';
             $span->$class = "am-img";
-            $new_image_url = $this->save_media($src, $filename);
+            $new_image_url = $this->save_media($src, $filename, $post_id, $existing_media);
             $span->$prop = $new_image_url;
         }
 
         $content = (string)$html;
-
-        if ($post == null) {
-            $post = [
-                'post_name' => $slug,
-                'post_type'   => 'post',
-                'post_status' => 'draft',
-                'post_title' => $title,
-                'post_content' => $content,
-                'post_category' => $post_categories
-            ];
-        }
-        else {
-            $post->post_content = $content;
-            $post->post_title = $title;
-            $post->post_category = $post_categories;
-        }
+        // Update post content, title and categories
+        $post->post_content = $content;
+        $post->post_title = $title;
+        $post->post_category = $post_categories;
 
         $post_id = wp_insert_post($post);
 
         // Create post feature image
         $featured_image_url_filename = $slug . '.' . pathinfo($featured_image_url)['extension'];
-        $this->save_media($featured_image_url, $featured_image_url_filename, $post_id);
+        $this->save_media($featured_image_url, $featured_image_url_filename, $post_id, $existing_media);
 
         wp_send_json(array(
             'status' => true,
@@ -182,10 +185,20 @@ class AmUpdateBlocksTable
         return $slug;
     }
 
-    private function save_media($image_url, $filename, $post_id = null) {
+    private function save_media($image_url, $filename, $post_id, $existing_media) {
+
+        foreach($existing_media as $media){
+            $oldMediaId= $media->ID;
+            $fileMedia = get_attached_file($oldMediaId, true);
+            $oldMediaFilename = pathinfo($fileMedia,PATHINFO_BASENAME);
+
+            if ($filename == $oldMediaFilename) {
+                wp_delete_attachment($oldMediaId, true);
+            }
+
+        }
 
         $upload_dir = wp_upload_dir();
-
         $image_data = file_get_contents( $image_url );
 
         if ( wp_mkdir_p( $upload_dir['path'] ) ) {
@@ -196,7 +209,6 @@ class AmUpdateBlocksTable
         }
 
         file_put_contents( $file, $image_data );
-
         $wp_filetype = wp_check_filetype( $filename, null );
 
         $attachment = array(
