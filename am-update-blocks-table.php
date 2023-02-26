@@ -144,7 +144,7 @@ class AmUpdateBlocksTable
             $prop = 'src';
             $src = $span->$prop;
             $alt = 'alt';
-            $filename = $this->get_image_slug($span->$alt) ?? basename($src);
+            $filename = $this->get_image_slug($span->$alt) . '.' . pathinfo($src)['extension'] ?? basename($src);
             $class = 'class';
             $span->$class = "am-img";
             $new_image_url = $this->save_media($src, $filename, $post_id, $existing_media);
