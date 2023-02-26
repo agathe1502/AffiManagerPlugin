@@ -157,7 +157,8 @@ class AmUpdateBlocksTable
         $post_id = wp_insert_post($post);
 
         // Create post feature image
-        $this->save_media($featured_image_url, basename($featured_image_url), $post_id);
+        $featured_image_url_filename = $slug . '.' . pathinfo($featured_image_url)['extension'];
+        $this->save_media($featured_image_url, $featured_image_url_filename, $post_id);
 
         wp_send_json(array(
             'status' => true,
@@ -169,6 +170,9 @@ class AmUpdateBlocksTable
 
     private function get_image_slug($image_alt) {
         $slug = str_replace(' ', '-', $image_alt);
+        $slug = str_replace('\'', '-', $slug);
+        $slug = str_replace('?', '', $slug);
+        $slug = str_replace('!', '', $slug);
         $unwanted_array = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
             'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
             'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',

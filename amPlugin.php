@@ -6,7 +6,7 @@
  * @license     GPL-3.0+
  * Plugin Name: AffiManager
  * Description: Mise à jour des sites depuis la plateforme affimanager.nilys.com
- * Version:     0.1.13
+ * Version:     0.1.14
  * Text Domain: AffiManager
  * License:     GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
